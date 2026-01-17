@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Search, ChevronLeft, ChevronRight, MapPin, Star, Phone, Mail, Truck, MoreVertical, Edit, Trash2, X, AlertTriangle, CheckCircle2, Clock } from 'lucide-react';
+import { Search, ChevronLeft, ChevronRight, MapPin, Star, Phone, Mail, Truck, MoreVertical, Trash2, X, AlertTriangle, CheckCircle2, Clock } from 'lucide-react';
 import apiClient from '../../api/apiClient';
 
 interface CurrentLocation {
@@ -178,7 +178,7 @@ const PartnersPage = () => {
     }
   };
 
-  const getVehicleIcon = (vehicleType: string) => {
+  const getVehicleIcon = (_vehicleType: string) => {
     return <Truck className="w-4 h-4" />;
   };
 

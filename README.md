@@ -1,5 +1,6 @@
 # Zipto Admin Platform
 
+
 **"Get everything in 10 min"**
 
 Complete Admin Dashboard + Backend API for the Zipto quick-commerce platform.
@@ -328,8 +329,9 @@ Use the provided Postman collection in `/backend/docs/Zipto-API.postman_collecti
 8. **Banners & Promotions** - Homepage content management
 9. **Location & Serviceability** - Delivery area configuration
 10. **Analytics & Reports** - Business insights
-11. **Settings** - Platform configuration
-12. **Admin Users & RBAC** - Admin management
+11. **Knowledge Base** - Documents & RAG management
+12. **Settings** - Platform configuration
+13. **Admin Users & RBAC** - Admin management
 
 ## 🚀 Deployment
 
@@ -694,22 +696,99 @@ async function sendChatMessage(sessionId, message, context) {
 }
 ```
 
+## 🧠 Knowledge Base RAG (Step 2 - Local First)
+
+Step 2 adds a local-first Knowledge Base with document ingestion, embeddings (Ollama), and retrieval-augmented chat.
+
+### What’s Included
+
+- Admin upload + document lifecycle (upload, reindex, enable/disable, delete)
+- Chunking + embeddings (Ollama `nomic-embed-text`)
+- Local vector store (Chroma)
+- RAG mode on existing `/api/chat/message` (no breaking changes)
+- Admin debugging search + chunk preview
+
+### Local Setup (RAG)
+
+1. **Start Ollama + embeddings model**
+
+```bash
+ollama pull nomic-embed-text
+ollama pull deepseek-r1:latest
+ollama serve
+```
+
+2. **Start Chroma (local vector store)**
+
+```bash
+pip install chromadb
+chroma run --path ./backend/data/vectorstore --host 0.0.0.0 --port 8001
+```
+
+3. **Update backend `.env`**
+
+```env
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_CHAT_MODEL=deepseek-r1:latest
+OLLAMA_EMBED_MODEL=nomic-embed-text
+
+VECTOR_STORE_DRIVER=chroma
+VECTOR_STORE_PATH=./data/vectorstore
+CHROMA_BASE_URL=http://localhost:8001
+
+KNOWLEDGE_UPLOAD_DIR=./uploads/knowledge
+KNOWLEDGE_MAX_FILE_MB=10
+KNOWLEDGE_TOPK=6
+KNOWLEDGE_CHUNK_SIZE=1000
+KNOWLEDGE_CHUNK_OVERLAP=120
+```
+
+4. **Upload a document**
+
+Go to Admin Dashboard → **Knowledge Base** → **Upload Document**.
+Requires admin permission: `KNOWLEDGE_MANAGE`.
+
+5. **Test chat in RAG mode**
+
+```bash
+curl -X POST http://localhost:5000/api/chat/message \
+  -H "Content-Type: application/json" \
+  -d '{
+    "sessionId": "rag-session-001",
+    "message": "What is the refund policy?",
+    "mode": "rag"
+  }'
+```
+
+**Single document mode:**
+
+```json
+{
+  "sessionId": "rag-session-002",
+  "message": "Summarize this policy",
+  "mode": "rag",
+  "documentId": "DOCUMENT_ID_HERE"
+}
+```
+
+### Troubleshooting (RAG)
+
+- **Ollama not running:** `curl http://localhost:11434/api/tags`
+- **Missing embed model:** `ollama pull nomic-embed-text`
+- **Chroma connection issue:** verify `CHROMA_BASE_URL` + that Chroma is running
+- **Vector store permission errors:** ensure `VECTOR_STORE_PATH` is writable
+
 ### Next Steps (Future Enhancements)
 
 The chat feature is designed to be extended incrementally:
 
-1. **Step 2 - RAG (Retrieval-Augmented Generation):**
-   - Add vector database (Pinecone/Weaviate)
-   - Index product catalog, FAQs, policies
-   - Enable knowledge-based responses
-
-2. **Step 3 - Agentic Tools:**
+1. **Step 3 - Agentic Tools:**
    - Add order lookup tool
    - Add payment status tool
    - Add refund tool
    - Enable function calling
 
-3. **Step 4 - AWS Bedrock Migration:**
+2. **Step 4 - AWS Bedrock Migration:**
    - Add Bedrock adapter
    - Deploy to AWS Lambda
    - Use Claude or other Bedrock models
@@ -811,8 +890,9 @@ Use the provided Postman collection in `/backend/docs/Zipto-API.postman_collecti
 8. **Banners & Promotions** - Homepage content management
 9. **Location & Serviceability** - Delivery area configuration
 10. **Analytics & Reports** - Business insights
-11. **Settings** - Platform configuration
-12. **Admin Users & RBAC** - Admin management
+11. **Knowledge Base** - Documents & RAG management
+12. **Settings** - Platform configuration
+13. **Admin Users & RBAC** - Admin management
 
 ## 🚀 Deployment
 
@@ -866,6 +946,19 @@ npm run build
 - `LOCAL_LLM_BASE_URL` - Local server URL (default: http://localhost:8000)
 - `LOCAL_LLM_MODEL` - Model name
 - `LOCAL_LLM_COMPAT_MODE` - Compatibility mode (openai | ollama | vllm)
+
+**Knowledge Base RAG (Step 2):**
+- `OLLAMA_BASE_URL` - Ollama base URL for embeddings/chat
+- `OLLAMA_CHAT_MODEL` - Chat model name (Ollama)
+- `OLLAMA_EMBED_MODEL` - Embedding model name (default: nomic-embed-text)
+- `VECTOR_STORE_DRIVER` - Vector store driver (chroma)
+- `VECTOR_STORE_PATH` - Local vector store path
+- `CHROMA_BASE_URL` - Chroma server URL (default: http://localhost:8001)
+- `KNOWLEDGE_UPLOAD_DIR` - Local uploads path for documents
+- `KNOWLEDGE_MAX_FILE_MB` - Upload size limit
+- `KNOWLEDGE_TOPK` - Retrieval top-k
+- `KNOWLEDGE_CHUNK_SIZE` - Chunk size (chars)
+- `KNOWLEDGE_CHUNK_OVERLAP` - Chunk overlap (chars)
 
 ### Admin Dashboard (.env)
 - `VITE_API_BASE_URL` - Backend API URL

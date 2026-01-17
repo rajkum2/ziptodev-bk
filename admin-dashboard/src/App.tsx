@@ -24,6 +24,9 @@ import ShelvesPage from './pages/shelves/ShelvesPage';
 import LocationsPage from './pages/locations/LocationsPage';
 import AnalyticsPage from './pages/analytics/AnalyticsPage';
 import SettingsPage from './pages/settings/SettingsPage';
+import KnowledgeDocumentsPage from './pages/knowledge/KnowledgeDocumentsPage';
+import KnowledgeDocumentDetailPage from './pages/knowledge/KnowledgeDocumentDetailPage';
+import KnowledgeSearchPage from './pages/knowledge/KnowledgeSearchPage';
 
 // Protected Route
 import ProtectedRoute from './components/ProtectedRoute';
@@ -73,6 +76,11 @@ function App() {
               
               {/* Settings */}
               <Route path="/settings" element={<SettingsPage />} />
+
+              {/* Knowledge Base */}
+              <Route path="/knowledge/documents" element={<KnowledgeDocumentsPage />} />
+              <Route path="/knowledge/documents/:id" element={<KnowledgeDocumentDetailPage />} />
+              <Route path="/knowledge/search" element={<KnowledgeSearchPage />} />
             </Route>
 
             {/* Catch all */}

@@ -7,8 +7,8 @@ const logger = require('../../utils/logger');
  */
 class LocalOllamaProvider {
   constructor() {
-    this.baseURL = process.env.LOCAL_LLM_BASE_URL || 'http://localhost:11434';
-    this.model = process.env.LOCAL_LLM_MODEL || 'deepseek-r1:latest';
+    this.baseURL = process.env.OLLAMA_BASE_URL || process.env.LOCAL_LLM_BASE_URL || 'http://localhost:11434';
+    this.model = process.env.OLLAMA_CHAT_MODEL || process.env.LOCAL_LLM_MODEL || 'deepseek-r1:latest';
     this.timeout = parseInt(process.env.LLM_TIMEOUT_MS) || 60000; // Ollama can be slower
   }
 

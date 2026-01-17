@@ -148,6 +148,21 @@ class AuditLogger {
   }
 
   /**
+   * Log knowledge base operation
+   */
+  static logKnowledgeOperation(admin, operation, documentId, title, changes = null) {
+    logger.info('AUDIT: Knowledge Operation', {
+      adminId: admin._id,
+      username: admin.username,
+      operation,
+      documentId,
+      title,
+      changes,
+      timestamp: new Date()
+    });
+  }
+
+  /**
    * Log permission denied attempt
    */
   static logPermissionDenied(admin, attemptedAction, resource) {

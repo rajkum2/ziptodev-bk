@@ -44,6 +44,17 @@ if (process.env.NODE_ENV === 'development') {
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
+// Block direct access to knowledge uploads
+app.use('/uploads/knowledge', (req, res) => {
+  res.status(404).json({
+    success: false,
+    error: {
+      code: 'NOT_FOUND',
+      message: 'Resource not found'
+    }
+  });
+});
+
 // Serve static files (uploads)
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
@@ -94,6 +105,7 @@ app.use('/api/admin/locations', require('./routes/admin/locations'));
 app.use('/api/admin/partners', require('./routes/admin/partners'));
 app.use('/api/admin/analytics', require('./routes/admin/analytics'));
 app.use('/api/admin/reports', require('./routes/admin/reports'));
+app.use('/api/admin/knowledge', require('./routes/admin/knowledge'));
 
 // 404 handler
 app.use(notFoundHandler);

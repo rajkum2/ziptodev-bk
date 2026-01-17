@@ -1,4 +1,4 @@
-import { Bell, User, LogOut, Settings } from 'lucide-react';
+import { Bell, LogOut, Settings } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { useSocket } from '../contexts/SocketContext';
 

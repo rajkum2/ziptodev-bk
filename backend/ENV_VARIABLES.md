@@ -170,6 +170,29 @@ LOCAL_LLM_MODEL=deepseek-chat
 LOCAL_LLM_COMPAT_MODE=openai
 ```
 
+---
+
+## 📚 Knowledge Base RAG (Step 2)
+
+```env
+# Ollama (embeddings + chat)
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_CHAT_MODEL=deepseek-r1:latest
+OLLAMA_EMBED_MODEL=nomic-embed-text
+
+# Vector store (local)
+VECTOR_STORE_DRIVER=chroma
+VECTOR_STORE_PATH=./data/vectorstore
+CHROMA_BASE_URL=http://localhost:8001
+
+# Knowledge uploads
+KNOWLEDGE_UPLOAD_DIR=./uploads/knowledge
+KNOWLEDGE_MAX_FILE_MB=10
+KNOWLEDGE_TOPK=6
+KNOWLEDGE_CHUNK_SIZE=1000
+KNOWLEDGE_CHUNK_OVERLAP=120
+```
+
 ### Local LLM Server Options
 
 #### Option 1: vLLM (Recommended)

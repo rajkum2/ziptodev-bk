@@ -1,4 +1,6 @@
 const chatService = require('../services/chat/chat.service');
+const ragService = require('../services/chat/rag.service');
+const KnowledgeDocument = require('../models/KnowledgeDocument');
 const ApiResponse = require('../utils/response');
 const logger = require('../utils/logger');
 
@@ -8,20 +10,52 @@ const logger = require('../utils/logger');
  */
 
 /**
+ * Check if RAG should be used (auto-detect)
+ * Returns true if there are enabled knowledge base documents
+ */
+const shouldUseRag = async () => {
+  try {
+    const enabledDocCount = await KnowledgeDocument.countDocuments({
+      'status.ingestionStatus': 'ready',
+      'status.enabledForChat': true
+    });
+    return enabledDocCount > 0;
+  } catch (error) {
+    logger.error('Error checking RAG availability:', error);
+    return false;
+  }
+};
+
+/**
  * POST /api/chat/message
  * Process a chat message
  */
 exports.sendMessage = async (req, res, next) => {
   try {
-    const { sessionId, userId, message, context } = req.body;
+    const { sessionId, userId, message, context, mode, documentId } = req.body;
+
+    // Auto-detect mode: use RAG if enabled documents exist
+    let effectiveMode = mode;
+    if (!mode || mode === 'auto') {
+      effectiveMode = await shouldUseRag() ? 'rag' : 'chat';
+      logger.info('Auto-detected chat mode', { effectiveMode });
+    }
 
     // Process chat message
-    const result = await chatService.processMessage(
-      sessionId,
-      message,
-      context || {},
-      userId || null
-    );
+    const result = effectiveMode === 'rag'
+      ? await ragService.processMessage(
+        sessionId,
+        message,
+        context || {},
+        userId || null,
+        { mode: effectiveMode, documentId }
+      )
+      : await chatService.processMessage(
+        sessionId,
+        message,
+        context || {},
+        userId || null
+      );
 
     // Check if there was an error during processing
     if (result.error) {
@@ -41,7 +75,8 @@ exports.sendMessage = async (req, res, next) => {
         traceId: result.traceId,
         // Include top-level compatibility keys
         replyText: result.replyText,
-        cards: result.cards
+        cards: result.cards,
+        sources: result.sources || []
       });
     }
 
@@ -52,13 +87,15 @@ exports.sendMessage = async (req, res, next) => {
         replyText: result.replyText,
         cards: result.cards,
         traceId: result.traceId,
-        metadata: result.metadata
+        metadata: result.metadata,
+        sources: result.sources
       },
       message: 'Success',
       // Top-level compatibility keys
       replyText: result.replyText,
       cards: result.cards,
-      traceId: result.traceId
+      traceId: result.traceId,
+      sources: result.sources
     });
 
   } catch (error) {

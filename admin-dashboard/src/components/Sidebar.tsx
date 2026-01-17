@@ -1,8 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  LayoutDashboard, ShoppingBag, Package, Users, Truck, 
-  MapPin, BarChart3, Settings, Image, Grid3x3, FolderTree 
+import {
+  LayoutDashboard, ShoppingBag, Package, Users, Truck,
+  MapPin, BarChart3, Settings, Image, Grid3x3, FolderTree, BookOpen, Search
 } from 'lucide-react';
+import { useAuth } from '../contexts/AuthContext';
 
 const menuItems = [
   { path: '/', icon: LayoutDashboard, label: 'Dashboard' },
@@ -15,11 +16,16 @@ const menuItems = [
   { path: '/shelves', icon: Grid3x3, label: 'Shelves' },
   { path: '/locations', icon: MapPin, label: 'Locations' },
   { path: '/analytics', icon: BarChart3, label: 'Analytics' },
-  { path: '/settings', icon: Settings, label: 'Settings' }
+  { path: '/settings', icon: Settings, label: 'Settings' },
+  { path: '/knowledge/documents', icon: BookOpen, label: 'Knowledge Base', permission: 'KNOWLEDGE_MANAGE' },
+  { path: '/knowledge/search', icon: Search, label: 'Knowledge Search', permission: 'KNOWLEDGE_MANAGE' }
 ];
 
 const Sidebar: React.FC = () => {
   const location = useLocation();
+  const { hasPermission } = useAuth();
+
+  const visibleItems = menuItems.filter(item => !item.permission || hasPermission(item.permission));
 
   return (
     <aside className="w-64 bg-white border-r border-gray-200 flex flex-col">
@@ -28,9 +34,9 @@ const Sidebar: React.FC = () => {
       </div>
 
       <nav className="flex-1 overflow-y-auto py-4">
-        {menuItems.map((item) => {
+        {visibleItems.map((item) => {
           const Icon = item.icon;
-          const isActive = location.pathname === item.path;
+          const isActive = location.pathname === item.path || location.pathname.startsWith(`${item.path}/`);
 
           return (
             <Link

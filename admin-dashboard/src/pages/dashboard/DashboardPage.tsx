@@ -2,10 +2,29 @@ import { useQuery } from '@tanstack/react-query';
 import apiClient from '../../api/apiClient';
 import { TrendingUp, ShoppingCart, Users, Package } from 'lucide-react';
 
+interface OverviewResponse {
+  data?: {
+    stats?: {
+      totalOrdersToday?: number;
+      revenueToday?: number;
+      activeUsers?: number;
+      availablePartners?: number;
+    };
+    recentOrders?: Array<{
+      _id: string;
+      orderId: string;
+      userId?: { name?: string; phone?: string };
+      pricing?: { grandTotal?: number };
+      status: string;
+      createdAt: string;
+    }>;
+  };
+}
+
 const DashboardPage: React.FC = () => {
-  const { data: overview, isLoading } = useQuery({
+  const { data: overview, isLoading } = useQuery<OverviewResponse>({
     queryKey: ['dashboard-overview'],
-    queryFn: () => apiClient.get('/admin/analytics/overview')
+    queryFn: () => apiClient.get<OverviewResponse>('/admin/analytics/overview')
   });
 
   if (isLoading) {

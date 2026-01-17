@@ -24,10 +24,16 @@ const chatMessageValidation = [
     .withMessage('Message must be between 1 and 1000 characters'),
 
   body('userId')
-    .optional()
-    .trim()
-    .isMongoId()
-    .withMessage('User ID must be a valid MongoDB ObjectId'),
+    .optional({ values: 'null' })
+    .custom((value) => {
+      if (value === null || value === '' || value === undefined) {
+        return true;
+      }
+      if (typeof value === 'string' && /^[a-fA-F0-9]{24}$/.test(value)) {
+        return true;
+      }
+      throw new Error('User ID must be a valid MongoDB ObjectId');
+    }),
 
   body('context')
     .optional()
@@ -58,7 +64,24 @@ const chatMessageValidation = [
     .optional()
     .trim()
     .isString()
-    .withMessage('Last order ID must be a string')
+    .withMessage('Last order ID must be a string'),
+
+  body('mode')
+    .optional()
+    .isIn(['chat', 'rag'])
+    .withMessage('mode must be either chat or rag'),
+
+  body('documentId')
+    .optional()
+    .custom((value) => {
+      if (value === null || value === '' || value === undefined) {
+        return true;
+      }
+      if (typeof value === 'string' && /^[a-fA-F0-9]{24}$/.test(value)) {
+        return true;
+      }
+      throw new Error('documentId must be a valid MongoDB ObjectId');
+    })
 ];
 
 module.exports = {

@@ -1,7 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
 import {
   LayoutDashboard, ShoppingBag, Package, Users, Truck,
-  MapPin, BarChart3, Settings, Image, Grid3x3, FolderTree, BookOpen, Search
+  MapPin, BarChart3, Settings, Image, Grid3x3, FolderTree, BookOpen, Search,
+  MessageSquare, Bug
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -18,7 +19,9 @@ const menuItems = [
   { path: '/analytics', icon: BarChart3, label: 'Analytics' },
   { path: '/settings', icon: Settings, label: 'Settings' },
   { path: '/knowledge/documents', icon: BookOpen, label: 'Knowledge Base', permission: 'KNOWLEDGE_MANAGE' },
-  { path: '/knowledge/search', icon: Search, label: 'Knowledge Search', permission: 'KNOWLEDGE_MANAGE' }
+  { path: '/knowledge/search', icon: Search, label: 'Knowledge Search', permission: 'KNOWLEDGE_MANAGE' },
+  { path: '/support/conversations', icon: MessageSquare, label: 'Support Inbox', permission: 'SUPPORT_VIEW' },
+  { path: '/support/rag-debug', icon: Bug, label: 'RAG Debug', permission: 'SUPPORT_RAG_DEBUG' }
 ];
 
 const Sidebar: React.FC = () => {

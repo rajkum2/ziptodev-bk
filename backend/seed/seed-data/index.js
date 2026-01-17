@@ -11,7 +11,15 @@ const admin = {
   email: 'admin@zipto.com',
   password: 'Admin@123',
   role: 'super_admin',
-  permissions: ['*'],
+  permissions: [
+    '*',
+    'SUPPORT_VIEW',
+    'SUPPORT_MANAGE',
+    'SUPPORT_TAKEOVER',
+    'SUPPORT_ASSIGN',
+    'SUPPORT_CLOSE',
+    'SUPPORT_RAG_DEBUG'
+  ],
   isActive: true,
   firstName: 'System',
   lastName: 'Admin'

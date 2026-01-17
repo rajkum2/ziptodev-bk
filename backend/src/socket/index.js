@@ -80,6 +80,22 @@ const initializeSocket = (server) => {
       socket.leave(`order:${orderId}`);
       logger.debug(`Unsubscribed from order: ${orderId}`);
     });
+
+    // Admin subscribes to specific conversation updates
+    socket.on('subscribe:conversation', (conversationId) => {
+      if (socket.user.type === 'admin' && conversationId) {
+        socket.join(`conversation:${conversationId}`);
+        logger.debug(`Admin subscribed to conversation: ${conversationId}`);
+      }
+    });
+
+    // Admin unsubscribes from conversation updates
+    socket.on('unsubscribe:conversation', (conversationId) => {
+      if (conversationId) {
+        socket.leave(`conversation:${conversationId}`);
+        logger.debug(`Unsubscribed from conversation: ${conversationId}`);
+      }
+    });
   });
 
   logger.info('✅ Socket.io initialized');
@@ -200,6 +216,86 @@ const emitNotificationToUser = (userId, notification) => {
   }
 };
 
+/**
+ * Emit conversation new message to admins and conversation room
+ */
+const emitConversationNewMessage = (payload) => {
+  try {
+    const io = getIO();
+    const conversationId = payload?.conversationId;
+    io.to('admins').emit('conversation:new_message', payload);
+    if (conversationId) {
+      io.to(`conversation:${conversationId}`).emit('conversation:new_message', payload);
+    }
+  } catch (error) {
+    logger.error('Error emitting conversation new message:', error);
+  }
+};
+
+/**
+ * Emit conversation assignment update
+ */
+const emitConversationAssigned = (payload) => {
+  try {
+    const io = getIO();
+    const conversationId = payload?.conversationId;
+    io.to('admins').emit('conversation:assigned', payload);
+    if (conversationId) {
+      io.to(`conversation:${conversationId}`).emit('conversation:assigned', payload);
+    }
+  } catch (error) {
+    logger.error('Error emitting conversation assigned:', error);
+  }
+};
+
+/**
+ * Emit conversation mode change
+ */
+const emitConversationModeChanged = (payload) => {
+  try {
+    const io = getIO();
+    const conversationId = payload?.conversationId;
+    io.to('admins').emit('conversation:mode_changed', payload);
+    if (conversationId) {
+      io.to(`conversation:${conversationId}`).emit('conversation:mode_changed', payload);
+    }
+  } catch (error) {
+    logger.error('Error emitting conversation mode change:', error);
+  }
+};
+
+/**
+ * Emit conversation closed
+ */
+const emitConversationClosed = (payload) => {
+  try {
+    const io = getIO();
+    const conversationId = payload?.conversationId;
+    io.to('admins').emit('conversation:closed', payload);
+    if (conversationId) {
+      io.to(`conversation:${conversationId}`).emit('conversation:closed', payload);
+    }
+  } catch (error) {
+    logger.error('Error emitting conversation closed:', error);
+  }
+};
+
+/**
+ * Emit conversation updated
+ */
+const emitConversationUpdated = (payload) => {
+  try {
+    const io = getIO();
+    const conversationId = payload?.conversationId;
+    io.to('admins').emit('conversation:updated', payload);
+    if (conversationId) {
+      io.to(`conversation:${conversationId}`).emit('conversation:updated', payload);
+    }
+  } catch (error) {
+    logger.error('Error emitting conversation updated:', error);
+  }
+};
+
 module.exports = {
   initializeSocket,
   getIO,
@@ -207,6 +303,11 @@ module.exports = {
   emitOrderStatusChange,
   emitOrderAssignment,
   emitPartnerLocationUpdate,
-  emitNotificationToUser
+  emitNotificationToUser,
+  emitConversationNewMessage,
+  emitConversationAssigned,
+  emitConversationModeChanged,
+  emitConversationClosed,
+  emitConversationUpdated
 };
 

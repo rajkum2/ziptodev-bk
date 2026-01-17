@@ -68,8 +68,15 @@ const chatMessageValidation = [
 
   body('mode')
     .optional()
-    .isIn(['chat', 'rag'])
-    .withMessage('mode must be either chat or rag'),
+    .isIn(['chat', 'rag', 'auto'])
+    .withMessage('mode must be chat, rag, or auto'),
+
+  body('conversationId')
+    .optional()
+    .trim()
+    .isString()
+    .isLength({ min: 1, max: 100 })
+    .withMessage('conversationId must be between 1 and 100 characters'),
 
   body('documentId')
     .optional()

@@ -1003,6 +1003,75 @@ MIT License - See LICENSE file for details
 
 Built with ❤️ for Zipto - "Get everything in 10 min"
 
+---
+
+## 🧰 Support Inbox Module (Step 3)
+
+The admin dashboard now includes Support-grade chat operations:
+
+### New Admin Screens
+- **Conversations Inbox:** `/support/conversations`
+- **Conversation Detail:** `/support/conversations/:conversationId`
+- **RAG Debug Explorer:** `/support/rag-debug`
+
+### Permissions Added
+- `SUPPORT_VIEW`
+- `SUPPORT_MANAGE`
+- `SUPPORT_TAKEOVER`
+- `SUPPORT_ASSIGN`
+- `SUPPORT_CLOSE`
+- `SUPPORT_RAG_DEBUG`
+
+### Socket Events Used
+- `conversation:new_message`
+- `conversation:updated`
+- `conversation:assigned`
+- `conversation:mode_changed`
+- `conversation:closed`
+
+### How to Test (Quick)
+1. Open **Support Inbox** → `/support/conversations`
+2. Click a conversation → `Takeover` or `Return to AI`
+3. Send a human reply or add an internal note
+4. Open an AI message → `View RAG Trace`
+5. Explore `/support/rag-debug` filters
+
+### Example Admin API Requests
+
+List conversations:
+```bash
+curl -H "Authorization: Bearer <ADMIN_TOKEN>" \
+  "http://localhost:5000/api/admin/support/conversations?status=open&queue=all&assigned=any&page=1&limit=20"
+```
+
+Get conversation detail:
+```bash
+curl -H "Authorization: Bearer <ADMIN_TOKEN>" \
+  "http://localhost:5000/api/admin/support/conversations/<conversationId>"
+```
+
+Assign conversation:
+```bash
+curl -X POST -H "Authorization: Bearer <ADMIN_TOKEN>" \
+  -H "Content-Type: application/json" \
+  -d '{"assignedToAdminId":"me"}' \
+  "http://localhost:5000/api/admin/support/conversations/<conversationId>/assign"
+```
+
+Send human reply:
+```bash
+curl -X POST -H "Authorization: Bearer <ADMIN_TOKEN>" \
+  -H "Content-Type: application/json" \
+  -d '{"content":"We are looking into this."}' \
+  "http://localhost:5000/api/admin/support/conversations/<conversationId>/messages"
+```
+
+List RAG traces:
+```bash
+curl -H "Authorization: Bearer <ADMIN_TOKEN>" \
+  "http://localhost:5000/api/admin/support/rag-traces?messageId=<messageId>"
+```
+
 
 ## 🐛 Troubleshooting
 

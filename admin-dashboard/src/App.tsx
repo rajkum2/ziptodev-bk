@@ -27,6 +27,9 @@ import SettingsPage from './pages/settings/SettingsPage';
 import KnowledgeDocumentsPage from './pages/knowledge/KnowledgeDocumentsPage';
 import KnowledgeDocumentDetailPage from './pages/knowledge/KnowledgeDocumentDetailPage';
 import KnowledgeSearchPage from './pages/knowledge/KnowledgeSearchPage';
+import ConversationsInboxPage from './pages/support/ConversationsInboxPage';
+import ConversationDetailPage from './pages/support/ConversationDetailPage';
+import RagDebugPage from './pages/support/RagDebugPage';
 
 // Protected Route
 import ProtectedRoute from './components/ProtectedRoute';
@@ -81,6 +84,11 @@ function App() {
               <Route path="/knowledge/documents" element={<KnowledgeDocumentsPage />} />
               <Route path="/knowledge/documents/:id" element={<KnowledgeDocumentDetailPage />} />
               <Route path="/knowledge/search" element={<KnowledgeSearchPage />} />
+
+              {/* Support Inbox */}
+              <Route path="/support/conversations" element={<ConversationsInboxPage />} />
+              <Route path="/support/conversations/:conversationId" element={<ConversationDetailPage />} />
+              <Route path="/support/rag-debug" element={<RagDebugPage />} />
             </Route>
 
             {/* Catch all */}

@@ -106,6 +106,8 @@ app.use('/api/admin/partners', require('./routes/admin/partners'));
 app.use('/api/admin/analytics', require('./routes/admin/analytics'));
 app.use('/api/admin/reports', require('./routes/admin/reports'));
 app.use('/api/admin/knowledge', require('./routes/admin/knowledge'));
+app.use('/api/admin/support', require('./routes/admin/supportConversations.routes'));
+app.use('/api/admin/support', require('./routes/admin/ragDebug.routes'));
 
 // 404 handler
 app.use(notFoundHandler);

@@ -159,11 +159,31 @@ class RagChatService {
         page: match.metadata?.page || null
       }));
 
+      const rag = {
+        chunks: matches.map(match => ({
+          docId: match.metadata?.documentId?.toString() || null,
+          docName: docMap[match.metadata?.documentId] || 'Unknown',
+          chunkId: String(match.metadata?.chunkIndex ?? ''),
+          score: match.score ?? null,
+          textPreview: (match.text || '').slice(0, 900)
+        })),
+        params: {
+          topK,
+          chunkSize: parseInt(process.env.KNOWLEDGE_CHUNK_SIZE) || 800,
+          overlap: parseInt(process.env.KNOWLEDGE_CHUNK_OVERLAP) || 120
+        },
+        models: {
+          embedModel: embeddings.model,
+          chatModel: llmResponse.model
+        }
+      };
+
       return {
         replyText: assistantMessage,
         cards: [],
         sources,
         traceId,
+        rag,
         metadata: {
           latency,
           model: llmResponse.model,

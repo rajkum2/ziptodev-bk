@@ -464,3 +464,486 @@
 {"adminId":"695f9c5895a7c5ebe17a3a6d","ip":"::1","level":"info","message":"AUDIT: Admin Login","role":"super_admin","timestamp":"2026-01-08T12:47:44.821Z","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","username":"admin"}
 {"level":"info","message":"Socket connected: TQQpeQZUBz85PbceAAAD (admin)","timestamp":"2026-01-08 18:17:44"}
 {"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-08 18:17:44"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 15:58:18"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 15:58:18"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-17 15:58:20"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 15:58:20"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 15:58:20"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 15:58:20"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 15:58:20"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 15:58:20"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 15:58:20"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 15:58:20"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 15:58:20"}
+{"level":"info","message":"Socket connected: htStApfCHeEzrQEcAAAB (admin)","timestamp":"2026-01-17 16:09:27"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 16:09:27"}
+{"adminId":"695f9c5895a7c5ebe17a3a6d","ip":"::1","level":"info","message":"AUDIT: Admin Login","role":"super_admin","timestamp":"2026-01-17T10:40:36.035Z","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","username":"admin"}
+{"level":"info","message":"Socket connected: zZ4apGV_DgeArQe9AAAD (admin)","timestamp":"2026-01-17 16:10:36"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 16:10:36"}
+{"level":"info","message":"Socket disconnected: htStApfCHeEzrQEcAAAB","timestamp":"2026-01-17 16:54:09"}
+{"level":"info","message":"Socket disconnected: zZ4apGV_DgeArQe9AAAD","timestamp":"2026-01-17 16:54:09"}
+{"level":"info","message":"Socket connected: rEzzOJHU9O5Ms5OiAAAF (admin)","timestamp":"2026-01-17 16:54:09"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 16:54:09"}
+{"level":"info","message":"Socket connected: 4e7HTJ53AL2tfg2qAAAH (admin)","timestamp":"2026-01-17 16:54:09"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 16:54:09"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-17 17:09:59"}
+{"level":"warn","message":"MongoDB disconnected. Attempting to reconnect...","timestamp":"2026-01-17 17:29:53"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-17 17:29:53"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-17 17:47:09"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-17 18:20:34"}
+{"level":"warn","message":"MongoDB disconnected. Attempting to reconnect...","timestamp":"2026-01-17 18:30:03"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-17 18:30:13"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-17 18:41:14"}
+{"level":"warn","message":"MongoDB disconnected. Attempting to reconnect...","timestamp":"2026-01-17 19:14:51"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-17 19:14:51"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-17 19:31:17"}
+{"level":"warn","message":"MongoDB disconnected. Attempting to reconnect...","timestamp":"2026-01-17 19:31:28"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-17 19:31:38"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-17 19:41:11"}
+{"level":"info","message":"Socket disconnected: rEzzOJHU9O5Ms5OiAAAF","timestamp":"2026-01-17 19:42:19"}
+{"adminId":"695f9c5895a7c5ebe17a3a6d","ip":"::1","level":"info","message":"AUDIT: Admin Login","role":"super_admin","timestamp":"2026-01-17T14:12:28.396Z","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cursor/2.2.44 Chrome/138.0.7204.251 Electron/37.7.0 Safari/537.36","username":"admin"}
+{"level":"info","message":"Socket connected: B4-ekDe236Kqt-VRAAAJ (admin)","timestamp":"2026-01-17 19:42:28"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 19:42:28"}
+{"level":"info","message":"Socket disconnected: 4e7HTJ53AL2tfg2qAAAH","timestamp":"2026-01-17 21:35:16"}
+{"level":"info","message":"Socket disconnected: B4-ekDe236Kqt-VRAAAJ","timestamp":"2026-01-17 22:25:51"}
+{"level":"info","message":"Socket connected: TD_s9x1T5mxAbcXwAAAL (admin)","timestamp":"2026-01-17 22:25:52"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 22:25:52"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-17 22:43:50"}
+{"level":"warn","message":"MongoDB disconnected. Attempting to reconnect...","timestamp":"2026-01-17 22:49:44"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-17 22:49:44"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:08:27"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:08:27"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:08:29"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:08:29"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:08:29"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:08:29"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:08:29"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:08:29"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:08:29"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:08:29"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:08:29"}
+{"level":"info","message":"Socket connected: BjhO_vh3YA7LvqdBAAAB (admin)","timestamp":"2026-01-17 23:08:30"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:08:30"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:08:31"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:08:31"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-02.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:08:31"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:08:31"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:08:31"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:08:31"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:08:31"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:08:31"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:08:31"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:08:31"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:08:31"}
+{"level":"info","message":"Socket connected: fz-L3siYPzs26LH3AAAB (admin)","timestamp":"2026-01-17 23:08:34"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:08:34"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:08:36"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:08:36"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-02.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:08:37"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:08:37"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:08:37"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:08:37"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:08:37"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:08:37"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:08:37"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:08:37"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:08:37"}
+{"level":"info","message":"Socket connected: kyTe-9v2rRZEUXxCAAAB (admin)","timestamp":"2026-01-17 23:08:39"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:08:39"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:08:41"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:08:41"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-02.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:08:42"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:08:42"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:08:42"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:08:42"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:08:42"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:08:42"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:08:42"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:08:42"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:08:42"}
+{"level":"info","message":"Socket connected: 6cqsMPK9NkMO6b3OAAAB (admin)","timestamp":"2026-01-17 23:08:44"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:08:44"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:09:00"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:09:00"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-00.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:09:01"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:09:01"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:09:01"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:09:01"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:09:01"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:09:01"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:09:01"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:09:01"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:09:01"}
+{"level":"info","message":"Socket connected: ll4QWhGxEtYy3PaRAAAB (admin)","timestamp":"2026-01-17 23:09:03"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:09:03"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:09:03"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:09:03"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-00.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:09:04"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:09:04"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:09:04"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:09:04"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:09:04"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:09:04"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:09:04"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:09:04"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:09:04"}
+{"level":"info","message":"Socket connected: rtkyiGFvl4TK0850AAAB (admin)","timestamp":"2026-01-17 23:09:04"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:09:04"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:10:14"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:10:14"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:10:15"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:10:15"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:10:15"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:10:15"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:10:15"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:10:15"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:10:15"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:10:15"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:10:15"}
+{"level":"info","message":"Socket connected: UcyivjLfTd3lW_KpAAAB (admin)","timestamp":"2026-01-17 23:10:17"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:10:17"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:10:20"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:10:20"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:10:21"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:10:21"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:10:21"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:10:21"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:10:21"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:10:21"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:10:21"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:10:21"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:10:21"}
+{"level":"info","message":"Socket connected: uylfktWCE1v_3xgfAAAB (admin)","timestamp":"2026-01-17 23:10:23"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:10:23"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:10:38"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:10:38"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:10:39"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:10:39"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:10:39"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:10:39"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:10:39"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:10:39"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:10:39"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:10:39"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:10:39"}
+{"level":"info","message":"Socket connected: eImtXsH2FuQ1CDAiAAAB (admin)","timestamp":"2026-01-17 23:10:40"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:10:40"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:10:43"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:10:43"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-02.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:10:44"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:10:44"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:10:44"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:10:44"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:10:44"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:10:44"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:10:44"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:10:44"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:10:44"}
+{"level":"info","message":"Socket connected: l0Ydmn3NMEayQljqAAAB (admin)","timestamp":"2026-01-17 23:10:44"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:10:44"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:10:47"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:10:47"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:10:48"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:10:48"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:10:48"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:10:48"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:10:48"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:10:48"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:10:48"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:10:48"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:10:48"}
+{"level":"info","message":"Socket connected: Uz0nDjtatdkzA8cHAAAB (admin)","timestamp":"2026-01-17 23:10:50"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:10:50"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:10:59"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:10:59"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-00.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:11:00"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:11:00"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:11:00"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:11:00"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:11:00"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:11:00"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:11:00"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:11:00"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:11:00"}
+{"level":"info","message":"Socket connected: Tu6WMp-QeXX-hKvTAAAB (admin)","timestamp":"2026-01-17 23:11:00"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:11:00"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:11:30"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:11:30"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-00.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:11:32"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:11:32"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:11:32"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:11:32"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:11:32"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:11:32"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:11:32"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:11:32"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:11:32"}
+{"level":"info","message":"Socket connected: JW33AtqD7Saa9FUuAAAB (admin)","timestamp":"2026-01-17 23:11:32"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:11:32"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:11:56"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:11:56"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-02.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:11:56"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:11:56"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:11:56"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:11:56"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:11:56"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:11:56"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:11:56"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:11:56"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:11:56"}
+{"level":"info","message":"Socket connected: nM2XjMUfZgtin8A0AAAB (admin)","timestamp":"2026-01-17 23:11:58"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:11:58"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:12:19"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:12:19"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:12:20"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:12:20"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:12:20"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:12:20"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:12:20"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:12:20"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:12:20"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:12:20"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:12:20"}
+{"level":"info","message":"Socket connected: TjXTkIj8LAyGYAMOAAAB (admin)","timestamp":"2026-01-17 23:12:20"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:12:20"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:12:25"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:12:25"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:12:26"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:12:26"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:12:26"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:12:26"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:12:26"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:12:26"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:12:26"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:12:26"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:12:26"}
+{"level":"info","message":"Socket connected: Y0KICchgdtiklQgKAAAB (admin)","timestamp":"2026-01-17 23:12:27"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:12:27"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:12:32"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:12:32"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:12:33"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:12:33"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:12:33"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:12:33"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:12:33"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:12:33"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:12:33"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:12:33"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:12:33"}
+{"level":"info","message":"Socket connected: r1uhuSOs1uNw2ZZTAAAB (admin)","timestamp":"2026-01-17 23:12:34"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:12:34"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:12:37"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:12:37"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-00.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:12:37"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:12:37"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:12:37"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:12:37"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:12:37"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:12:37"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:12:37"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:12:37"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:12:37"}
+{"level":"info","message":"Socket connected: KPm2Np-JpDCuPDpmAAAB (admin)","timestamp":"2026-01-17 23:12:38"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:12:38"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:13:03"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:13:03"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:13:04"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:13:04"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:13:04"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:13:04"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:13:04"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:13:04"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:13:04"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:13:04"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:13:04"}
+{"level":"info","message":"Socket connected: mlxO1qWEjGFYHSrGAAAB (admin)","timestamp":"2026-01-17 23:13:04"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:13:04"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:13:31"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:13:31"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-02.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:13:32"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:13:32"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:13:32"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:13:32"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:13:32"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:13:32"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:13:32"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:13:32"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:13:32"}
+{"level":"info","message":"Socket connected: 4JI5ACamPKHwQB3ZAAAB (admin)","timestamp":"2026-01-17 23:13:34"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:13:34"}
+{"level":"info","message":"Socket disconnected: 4JI5ACamPKHwQB3ZAAAB","timestamp":"2026-01-17 23:19:07"}
+{"level":"info","message":"Socket connected: S9Mbh_M49vH5BMOJAAAD (admin)","timestamp":"2026-01-17 23:19:07"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:19:07"}
+{"level":"info","message":"Socket disconnected: S9Mbh_M49vH5BMOJAAAD","timestamp":"2026-01-17 23:19:23"}
+{"level":"info","message":"Socket connected: go3VNochzMxeezX6AAAF (admin)","timestamp":"2026-01-17 23:19:23"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:19:23"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:20:10"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:20:10"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:20:11"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:20:11"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:20:11"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:20:11"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:20:11"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:20:11"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:20:11"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:20:11"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:20:11"}
+{"level":"info","message":"Socket connected: kuWzYySH8-rmM4M9AAAB (admin)","timestamp":"2026-01-17 23:20:13"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:20:13"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:20:22"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:20:22"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-00.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:20:23"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:20:23"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:20:23"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:20:23"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:20:23"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:20:23"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:20:23"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:20:23"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:20:23"}
+{"level":"info","message":"Socket connected: mAl8ftxWOsNLiuQBAAAB (admin)","timestamp":"2026-01-17 23:20:25"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:20:25"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:20:26"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:20:26"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-00.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:20:27"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:20:27"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:20:27"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:20:27"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:20:27"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:20:27"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:20:27"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:20:27"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:20:27"}
+{"level":"info","message":"Socket connected: yQoDSwzk0JTcLwzRAAAB (admin)","timestamp":"2026-01-17 23:20:29"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:20:29"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:21:16"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:21:16"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-00.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:21:18"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:21:18"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:21:18"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:21:18"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:21:18"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:21:18"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:21:18"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:21:18"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:21:18"}
+{"level":"info","message":"Socket connected: ZzeWhLST1KEU5nY2AAAB (admin)","timestamp":"2026-01-17 23:21:19"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:21:19"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:21:51"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:21:51"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:21:51"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:21:51"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:21:51"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:21:51"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:21:51"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:21:51"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:21:51"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:21:51"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:21:51"}
+{"level":"info","message":"Socket connected: moH75NovGuELRdrIAAAB (admin)","timestamp":"2026-01-17 23:21:51"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:21:51"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:23:32"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:23:32"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-00.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:23:33"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:23:33"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:23:33"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:23:33"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:23:33"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:23:33"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:23:33"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:23:33"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:23:33"}
+{"level":"info","message":"Socket connected: uG3Pd3v2L5nYQkV8AAAB (admin)","timestamp":"2026-01-17 23:23:36"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:23:36"}
+{"level":"info","message":"Socket connected: VLrhaUi4dWxRNwEGAAAD (admin)","timestamp":"2026-01-17 23:24:06"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:24:06"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:25:40"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:25:40"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-02.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:25:41"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:25:41"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:25:41"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:25:41"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:25:41"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:25:41"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:25:41"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:25:41"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:25:41"}
+{"level":"info","message":"Socket connected: UlDniaiTM53vZELjAAAB (admin)","timestamp":"2026-01-17 23:25:42"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:25:42"}
+{"level":"info","message":"Socket connected: iMV2ZUzum_rI8jvuAAAD (admin)","timestamp":"2026-01-17 23:25:42"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:25:42"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:25:46"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:25:46"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:25:47"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:25:47"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:25:47"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:25:47"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:25:47"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:25:47"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:25:47"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:25:47"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:25:47"}
+{"level":"info","message":"Socket connected: P7d_mrtbJ83ioQlKAAAB (admin)","timestamp":"2026-01-17 23:25:47"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:25:47"}
+{"level":"info","message":"Socket connected: e3qpr8r73fScARMNAAAD (admin)","timestamp":"2026-01-17 23:25:48"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:25:48"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:25:54"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:25:54"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-00.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:25:55"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:25:55"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:25:55"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:25:55"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:25:55"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:25:55"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:25:55"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:25:55"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:25:55"}
+{"level":"info","message":"Socket connected: iLCJVQr9Hc0NRoJcAAAB (admin)","timestamp":"2026-01-17 23:25:55"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:25:55"}
+{"level":"info","message":"Socket connected: 3Yy2JA-n-sP2ilwpAAAD (admin)","timestamp":"2026-01-17 23:25:58"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:25:58"}
+{"level":"info","message":"Initializing LLM provider: local_llm","timestamp":"2026-01-17 23:27:37"}
+{"historyLimit":12,"level":"info","message":"Session Store initialized","persistToMongo":true,"timestamp":"2026-01-17 23:27:37"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-02.dzddd4y.mongodb.net","timestamp":"2026-01-17 23:27:38"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-17 23:27:38"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-17 23:27:38"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-17 23:27:38"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-17 23:27:38"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-17 23:27:38"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-17 23:27:38"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-17 23:27:38"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-17 23:27:38"}
+{"level":"info","message":"Socket connected: -_KzC4rPCtswU2r_AAAB (admin)","timestamp":"2026-01-17 23:27:38"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:27:38"}
+{"level":"info","message":"Socket connected: lsJvXpcWXHhVWgIDAAAD (admin)","timestamp":"2026-01-17 23:27:40"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-17 23:27:40"}
+{"level":"info","message":"🌱 Starting database seeding...\n","timestamp":"2026-01-17 23:31:15"}
+{"level":"info","message":"✅ Connected to MongoDB Atlas","timestamp":"2026-01-17 23:31:15"}
+{"level":"info","message":"Clearing existing data...","timestamp":"2026-01-17 23:31:15"}
+{"level":"info","message":"✅ Existing data cleared","timestamp":"2026-01-17 23:31:16"}
+{"level":"info","message":"Creating admin user...","timestamp":"2026-01-17 23:31:16"}
+{"level":"info","message":"✅ Admin created: admin","timestamp":"2026-01-17 23:31:16"}
+{"level":"info","message":"\nCreating categories...","timestamp":"2026-01-17 23:31:16"}
+{"level":"info","message":"✅ Created 10 categories","timestamp":"2026-01-17 23:31:16"}
+{"level":"info","message":"\nCreating products...","timestamp":"2026-01-17 23:31:16"}
+{"level":"info","message":"✅ Created 99 products","timestamp":"2026-01-17 23:31:17"}
+{"level":"info","message":"\nCreating users...","timestamp":"2026-01-17 23:31:17"}
+{"level":"info","message":"✅ Created 50 users","timestamp":"2026-01-17 23:31:17"}
+{"level":"info","message":"\nCreating serviceable locations...","timestamp":"2026-01-17 23:31:17"}
+{"level":"info","message":"✅ Created 15 locations","timestamp":"2026-01-17 23:31:17"}
+{"level":"info","message":"\nCreating delivery partners...","timestamp":"2026-01-17 23:31:17"}
+{"level":"info","message":"✅ Created 15 delivery partners","timestamp":"2026-01-17 23:31:17"}
+{"level":"info","message":"\nCreating orders...","timestamp":"2026-01-17 23:31:17"}
+{"level":"info","message":"✅ Created 30 orders","timestamp":"2026-01-17 23:31:17"}
+{"level":"info","message":"\nCreating banners...","timestamp":"2026-01-17 23:31:17"}
+{"level":"info","message":"✅ Created 6 banners","timestamp":"2026-01-17 23:31:17"}
+{"level":"info","message":"\nCreating shelves...","timestamp":"2026-01-17 23:31:17"}
+{"level":"info","message":"✅ Created 8 shelves","timestamp":"2026-01-17 23:31:17"}
+{"level":"info","message":"\nCreating analytics events...","timestamp":"2026-01-17 23:31:17"}
+{"level":"info","message":"✅ Created 100 analytics events","timestamp":"2026-01-17 23:31:17"}
+{"level":"info","message":"\nCreating support conversations...","timestamp":"2026-01-17 23:31:17"}
+{"level":"info","message":"✅ Created 15 support conversations","timestamp":"2026-01-17 23:31:18"}
+{"level":"info","message":"Socket disconnected: lsJvXpcWXHhVWgIDAAAD","timestamp":"2026-01-17 23:31:24"}
+{"adminId":"696bce6c2be1ac9e4c258a1d","ip":"::1","level":"info","message":"AUDIT: Admin Login","role":"super_admin","timestamp":"2026-01-17T18:01:32.954Z","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","username":"admin"}
+{"level":"info","message":"Socket connected: OnfciMdpR8bPXWJKAAAF (admin)","timestamp":"2026-01-17 23:31:32"}
+{"level":"info","message":"Admin 696bce6c2be1ac9e4c258a1d joined admin room","timestamp":"2026-01-17 23:31:32"}

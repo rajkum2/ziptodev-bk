@@ -1,0 +1,466 @@
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-mmydyq8-shard-00-01.pnffuiw.mongodb.net","timestamp":"2026-01-08 13:25:05"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 13:25:05"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 13:25:05"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 13:25:05"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 13:25:05"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 13:25:05"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 13:25:05"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 13:25:05"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 13:25:05"}
+{"level":"error","message":"invalid signature","name":"JsonWebTokenError","stack":"JsonWebTokenError: invalid signature\n    at /Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/jsonwebtoken/verify.js:171:19\n    at getSecret (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/jsonwebtoken/verify.js:97:14)\n    at module.exports [as verify] (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/jsonwebtoken/verify.js:101:10)\n    at verifyToken (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/src/utils/jwt.js:41:16)\n    at Array.<anonymous> (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/src/socket/index.js:38:25)\n    at run (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/socket.io/dist/namespace.js:133:19)\n    at Namespace.run (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/socket.io/dist/namespace.js:144:9)\n    at Namespace._add (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/socket.io/dist/namespace.js:221:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2026-01-08 13:25:15"}
+{"expiredAt":"2026-01-07T18:38:45.000Z","level":"error","message":"jwt expired","name":"TokenExpiredError","stack":"TokenExpiredError: jwt expired\n    at /Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/jsonwebtoken/verify.js:190:21\n    at getSecret (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/jsonwebtoken/verify.js:97:14)\n    at module.exports [as verify] (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/jsonwebtoken/verify.js:101:10)\n    at verifyAdminToken (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/src/utils/jwt.js:63:16)\n    at authenticateAdmin (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/src/middlewares/auth.js:70:21)\n    at Layer.handle [as handle_request] (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/express/lib/router/index.js:284:15","timestamp":"2026-01-08 13:25:15"}
+{"adminId":"695dff1f854d45675420637e","ip":"::1","level":"info","message":"AUDIT: Admin Login","role":"admin","timestamp":"2026-01-08T07:55:26.636Z","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","username":"admin"}
+{"level":"info","message":"Socket connected: j_ScCtceQdFHeqFDAAAD (admin)","timestamp":"2026-01-08 13:25:26"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 13:25:26"}
+{"level":"info","message":"\nSIGINT received. Starting graceful shutdown...","timestamp":"2026-01-08 13:28:02"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-mmydyq8-shard-00-00.pnffuiw.mongodb.net","timestamp":"2026-01-08 14:07:32"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 14:07:32"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 14:07:32"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 14:07:32"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 14:07:32"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 14:07:32"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 14:07:32"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 14:07:32"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 14:07:32"}
+{"level":"info","message":"Socket connected: cTjvjlwDUOFS9idSAAAB (admin)","timestamp":"2026-01-08 14:07:35"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 14:07:35"}
+{"level":"info","message":"Socket disconnected: cTjvjlwDUOFS9idSAAAB","timestamp":"2026-01-08 14:07:44"}
+{"level":"info","message":"Socket connected: Aq_giBW8vdpuUCn0AAAD (admin)","timestamp":"2026-01-08 14:07:45"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 14:07:45"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-mmydyq8-shard-00-01.pnffuiw.mongodb.net","timestamp":"2026-01-08 14:11:09"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 14:11:10"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 14:11:10"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 14:11:10"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 14:11:10"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 14:11:10"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 14:11:10"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 14:11:10"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 14:11:10"}
+{"level":"info","message":"Socket connected: BmQG9-2uVNDfwR8GAAAB (admin)","timestamp":"2026-01-08 14:11:10"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 14:11:10"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-mmydyq8-shard-00-01.pnffuiw.mongodb.net","timestamp":"2026-01-08 14:11:53"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 14:11:53"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 14:11:53"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 14:11:53"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 14:11:53"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 14:11:53"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 14:11:53"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 14:11:53"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 14:11:53"}
+{"level":"info","message":"Socket connected: kgLr1dNbS6WZ-mW7AAAB (admin)","timestamp":"2026-01-08 14:11:53"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 14:11:53"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-mmydyq8-shard-00-01.pnffuiw.mongodb.net","timestamp":"2026-01-08 14:12:59"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 14:12:59"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 14:12:59"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 14:12:59"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 14:12:59"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 14:12:59"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 14:12:59"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 14:12:59"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 14:12:59"}
+{"level":"info","message":"Socket connected: MK1yW0_DK-IlL7DbAAAB (admin)","timestamp":"2026-01-08 14:13:00"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 14:13:00"}
+{"level":"info","message":"OTP for 9213723036: 152128","timestamp":"2026-01-08 14:15:19"}
+{"adminId":"695dff1f854d45675420637e","ip":"::1","level":"info","message":"AUDIT: Admin Login","role":"admin","timestamp":"2026-01-08T08:52:50.935Z","userAgent":"PostmanRuntime/7.51.0","username":"admin"}
+{"ip":"::1","level":"error","message":"Product validation failed: variants.0.variantId: Path `variantId` is required., variants.1.variantId: Path `variantId` is required.","method":"POST","stack":"ValidationError: Product validation failed: variants.0.variantId: Path `variantId` is required., variants.1.variantId: Path `variantId` is required.\n    at Document.invalidate (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/mongoose/lib/document.js:3373:32)\n    at Subdocument.invalidate (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/mongoose/lib/types/subdocument.js:257:12)\n    at /Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/mongoose/lib/document.js:3134:17\n    at /Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/mongoose/lib/schemaType.js:1446:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)","timestamp":"2026-01-08 14:26:55","url":"/api/admin/products","userId":"695dff1f854d45675420637e"}
+{"ip":"::1","level":"error","message":"Product validation failed: variants.0.variantId: Path `variantId` is required., variants.1.variantId: Path `variantId` is required.","method":"POST","stack":"ValidationError: Product validation failed: variants.0.variantId: Path `variantId` is required., variants.1.variantId: Path `variantId` is required.\n    at Document.invalidate (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/mongoose/lib/document.js:3373:32)\n    at Subdocument.invalidate (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/mongoose/lib/types/subdocument.js:257:12)\n    at /Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/mongoose/lib/document.js:3134:17\n    at /Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/mongoose/lib/schemaType.js:1446:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)","timestamp":"2026-01-08 14:27:21","url":"/api/admin/products","userId":"695dff1f854d45675420637e"}
+{"level":"info","message":"Socket disconnected: MK1yW0_DK-IlL7DbAAAB","timestamp":"2026-01-08 14:35:39"}
+{"level":"info","message":"Socket connected: eXxL1I9CeCy0CVXHAAAD (admin)","timestamp":"2026-01-08 14:35:39"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 14:35:39"}
+{"adminId":"695dff1f854d45675420637e","changes":{"name":{"new":"Surf Excel Maticcccccc","old":"Surf Excel Matic"},"variants":{"new":[{"inStock":true,"mrp":280,"name":"1 kg","price":265,"sku":"SUR-1","stock":50,"variantId":"var_1767767839244_kc90y40t5"},{"inStock":true,"mrp":530,"name":"2 kg","price":505,"sku":"SUR-2","stock":30,"variantId":"var_1767767839244_ccbqmmsfm"},{"inStock":true,"mrp":1020,"name":"4 kg","price":975,"sku":"SUR-3","stock":15,"variantId":"var_1767767839244_8taw06qcu"}],"old":[{"_id":"695dff1f854d45675420634b","inStock":true,"mrp":280,"name":"1 kg","price":265,"sku":"SUR-1","stock":50,"unit":"kg","variantId":"var_1767767839244_kc90y40t5","weight":1000},{"_id":"695dff1f854d45675420634c","inStock":true,"mrp":530,"name":"2 kg","price":505,"sku":"SUR-2","stock":30,"unit":"kg","variantId":"var_1767767839244_ccbqmmsfm","weight":2000},{"_id":"695dff1f854d45675420634d","inStock":true,"mrp":1020,"name":"4 kg","price":975,"sku":"SUR-3","stock":15,"unit":"kg","variantId":"var_1767767839244_8taw06qcu","weight":4000}]}},"level":"info","message":"AUDIT: Product Operation","operation":"UPDATE","productId":"695dff1f4940b02877dd9fd6","productName":"Surf Excel Maticcccccc","timestamp":"2026-01-08T09:12:48.635Z","username":"admin"}
+{"level":"info","message":"Product updated: Surf Excel Maticcccccc by admin","timestamp":"2026-01-08 14:42:48"}
+{"adminId":"695dff1f854d45675420637e","changes":{"name":{"new":"Surf Excel Matic","old":"Surf Excel Maticcccccc"},"variants":{"new":[{"inStock":true,"mrp":280,"name":"1 kg","price":265,"sku":"SUR-1","stock":50,"variantId":"var_1767767839244_kc90y40t5"},{"inStock":true,"mrp":530,"name":"2 kg","price":505,"sku":"SUR-2","stock":30,"variantId":"var_1767767839244_ccbqmmsfm"},{"inStock":true,"mrp":1020,"name":"4 kg","price":975,"sku":"SUR-3","stock":15,"variantId":"var_1767767839244_8taw06qcu"}],"old":[{"_id":"695f7510c3207d61e17b1aa5","inStock":true,"mrp":280,"name":"1 kg","price":265,"sku":"SUR-1","stock":50,"variantId":"var_1767767839244_kc90y40t5"},{"_id":"695f7510c3207d61e17b1aa6","inStock":true,"mrp":530,"name":"2 kg","price":505,"sku":"SUR-2","stock":30,"variantId":"var_1767767839244_ccbqmmsfm"},{"_id":"695f7510c3207d61e17b1aa7","inStock":true,"mrp":1020,"name":"4 kg","price":975,"sku":"SUR-3","stock":15,"variantId":"var_1767767839244_8taw06qcu"}]}},"level":"info","message":"AUDIT: Product Operation","operation":"UPDATE","productId":"695dff1f4940b02877dd9fd6","productName":"Surf Excel Matic","timestamp":"2026-01-08T09:12:54.629Z","username":"admin"}
+{"level":"info","message":"Product updated: Surf Excel Matic by admin","timestamp":"2026-01-08 14:42:54"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-mmydyq8-shard-00-01.pnffuiw.mongodb.net","timestamp":"2026-01-08 14:47:45"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 14:47:45"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 14:47:45"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 14:47:45"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 14:47:45"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 14:47:45"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 14:47:45"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 14:47:45"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 14:47:45"}
+{"level":"info","message":"Socket connected: 6ybi7c1KVWdLgoZeAAAB (admin)","timestamp":"2026-01-08 14:47:46"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 14:47:46"}
+{"level":"info","message":"\nSIGINT received. Starting graceful shutdown...","timestamp":"2026-01-08 14:47:49"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-mmydyq8-shard-00-00.pnffuiw.mongodb.net","timestamp":"2026-01-08 14:47:51"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 14:47:51"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 14:47:51"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 14:47:51"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 14:47:51"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 14:47:51"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 14:47:51"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 14:47:51"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 14:47:51"}
+{"level":"info","message":"Socket connected: rp7KRrG_wV9H_PUDAAAB (admin)","timestamp":"2026-01-08 14:47:53"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 14:47:53"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-mmydyq8-shard-00-00.pnffuiw.mongodb.net","timestamp":"2026-01-08 14:49:10"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 14:49:10"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 14:49:10"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 14:49:10"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 14:49:10"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 14:49:10"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 14:49:10"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 14:49:10"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 14:49:10"}
+{"level":"info","message":"Socket connected: KghwCZjITeJ-s9SsAAAB (admin)","timestamp":"2026-01-08 14:49:12"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 14:49:12"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-mmydyq8-shard-00-00.pnffuiw.mongodb.net","timestamp":"2026-01-08 14:49:14"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 14:49:14"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 14:49:14"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 14:49:14"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 14:49:14"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 14:49:14"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 14:49:14"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 14:49:14"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 14:49:14"}
+{"level":"info","message":"Socket connected: tuzKE0pPO_XonWVTAAAB (admin)","timestamp":"2026-01-08 14:49:14"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 14:49:14"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-mmydyq8-shard-00-00.pnffuiw.mongodb.net","timestamp":"2026-01-08 14:50:56"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 14:50:56"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 14:50:56"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 14:50:56"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 14:50:56"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 14:50:56"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 14:50:56"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 14:50:56"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 14:50:56"}
+{"level":"info","message":"Socket connected: KZ_i83cSEB3XXlWdAAAB (admin)","timestamp":"2026-01-08 14:50:58"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 14:50:58"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-mmydyq8-shard-00-00.pnffuiw.mongodb.net","timestamp":"2026-01-08 14:51:12"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 14:51:12"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 14:51:12"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 14:51:12"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 14:51:12"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 14:51:12"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 14:51:12"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 14:51:12"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 14:51:12"}
+{"level":"info","message":"Socket connected: HfkZCXYgy444hpkzAAAB (admin)","timestamp":"2026-01-08 14:51:12"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 14:51:12"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-mmydyq8-shard-00-00.pnffuiw.mongodb.net","timestamp":"2026-01-08 14:51:22"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 14:51:22"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 14:51:22"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 14:51:22"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 14:51:22"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 14:51:22"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 14:51:22"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 14:51:22"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 14:51:22"}
+{"level":"info","message":"Socket connected: 4mn2s9ILKBS7oQlAAAAB (admin)","timestamp":"2026-01-08 14:51:22"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 14:51:22"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-mmydyq8-shard-00-00.pnffuiw.mongodb.net","timestamp":"2026-01-08 14:58:00"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 14:58:00"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 14:58:00"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 14:58:00"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 14:58:00"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 14:58:00"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 14:58:00"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 14:58:00"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 14:58:00"}
+{"level":"info","message":"Socket connected: PXwVpGNWQgVsdFTfAAAB (admin)","timestamp":"2026-01-08 14:58:01"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 14:58:01"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-mmydyq8-shard-00-02.pnffuiw.mongodb.net","timestamp":"2026-01-08 14:58:14"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 14:58:14"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 14:58:14"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 14:58:14"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 14:58:14"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 14:58:14"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 14:58:14"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 14:58:14"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 14:58:14"}
+{"level":"info","message":"Socket connected: wRInAC0pgqOoIdLHAAAB (admin)","timestamp":"2026-01-08 14:58:17"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 14:58:17"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-mmydyq8-shard-00-02.pnffuiw.mongodb.net","timestamp":"2026-01-08 14:58:27"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 14:58:27"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 14:58:27"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 14:58:27"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 14:58:27"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 14:58:27"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 14:58:27"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 14:58:27"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 14:58:27"}
+{"level":"info","message":"Socket connected: dwyL5VGdsxovL9C-AAAB (admin)","timestamp":"2026-01-08 14:58:28"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 14:58:28"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-mmydyq8-shard-00-02.pnffuiw.mongodb.net","timestamp":"2026-01-08 14:58:43"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 14:58:43"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 14:58:43"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 14:58:43"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 14:58:43"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 14:58:43"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 14:58:43"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 14:58:43"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 14:58:43"}
+{"level":"info","message":"Socket connected: 75wPlg0iui4YfWV5AAAB (admin)","timestamp":"2026-01-08 14:58:44"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 14:58:44"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-mmydyq8-shard-00-02.pnffuiw.mongodb.net","timestamp":"2026-01-08 14:58:47"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 14:58:47"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 14:58:47"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 14:58:47"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 14:58:47"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 14:58:47"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 14:58:47"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 14:58:47"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 14:58:47"}
+{"level":"info","message":"Socket connected: hRztFlbc8GKlFufKAAAB (admin)","timestamp":"2026-01-08 14:58:47"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 14:58:47"}
+{"level":"info","message":"Category updated: Meat & Seafood by admin","timestamp":"2026-01-08 14:59:45"}
+{"level":"info","message":"Socket disconnected: hRztFlbc8GKlFufKAAAB","timestamp":"2026-01-08 15:23:43"}
+{"level":"info","message":"Socket connected: oDg9bhM903b4rFynAAAD (admin)","timestamp":"2026-01-08 15:23:43"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 15:23:43"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-08 15:39:16"}
+{"level":"warn","message":"MongoDB disconnected. Attempting to reconnect...","timestamp":"2026-01-08 15:39:26"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-08 15:39:26"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-08 15:55:29"}
+{"level":"info","message":"Socket disconnected: oDg9bhM903b4rFynAAAD","timestamp":"2026-01-08 16:03:34"}
+{"level":"info","message":"Socket connected: eHeTrUntoxtwW3LDAAAF (admin)","timestamp":"2026-01-08 16:03:35"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 16:03:35"}
+{"level":"warn","message":"MongoDB disconnected. Attempting to reconnect...","timestamp":"2026-01-08 16:03:36"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-08 16:03:36"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-08 16:04:44"}
+{"level":"warn","message":"MongoDB disconnected. Attempting to reconnect...","timestamp":"2026-01-08 16:21:07"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-08 16:21:07"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-08 16:37:10"}
+{"level":"warn","message":"MongoDB disconnected. Attempting to reconnect...","timestamp":"2026-01-08 16:37:20"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-08 16:37:20"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-08 16:44:34"}
+{"level":"info","message":"MongoDB reconnected","timestamp":"2026-01-08 17:10:01"}
+{"level":"info","message":"\nSIGINT received. Starting graceful shutdown...","timestamp":"2026-01-08 17:18:19"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-00.dzddd4y.mongodb.net","timestamp":"2026-01-08 17:19:52"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 17:19:52"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 17:19:52"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 17:19:52"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 17:19:52"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 17:19:52"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 17:19:52"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 17:19:52"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 17:19:52"}
+{"level":"info","message":"Socket connected: 8t1ZXOFHzJXeWT_GAAAB (admin)","timestamp":"2026-01-08 17:19:53"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 17:19:53"}
+{"level":"info","message":"\nSIGINT received. Starting graceful shutdown...","timestamp":"2026-01-08 17:20:17"}
+{"level":"info","message":"🌱 Starting database seeding...\n","timestamp":"2026-01-08 17:29:03"}
+{"level":"info","message":"✅ Connected to MongoDB Atlas","timestamp":"2026-01-08 17:29:03"}
+{"level":"info","message":"Clearing existing data...","timestamp":"2026-01-08 17:29:03"}
+{"level":"info","message":"✅ Existing data cleared","timestamp":"2026-01-08 17:29:03"}
+{"level":"info","message":"Creating admin user...","timestamp":"2026-01-08 17:29:03"}
+{"level":"info","message":"✅ Admin created: admin","timestamp":"2026-01-08 17:29:04"}
+{"level":"info","message":"\nCreating categories...","timestamp":"2026-01-08 17:29:04"}
+{"level":"info","message":"✅ Created 10 categories","timestamp":"2026-01-08 17:29:04"}
+{"level":"info","message":"\nCreating products...","timestamp":"2026-01-08 17:29:04"}
+{"level":"info","message":"✅ Created 99 products","timestamp":"2026-01-08 17:29:04"}
+{"level":"info","message":"\nCreating users...","timestamp":"2026-01-08 17:29:04"}
+{"level":"info","message":"✅ Created 50 users","timestamp":"2026-01-08 17:29:04"}
+{"level":"info","message":"\nCreating serviceable locations...","timestamp":"2026-01-08 17:29:04"}
+{"level":"info","message":"✅ Created 15 locations","timestamp":"2026-01-08 17:29:04"}
+{"level":"info","message":"\nCreating delivery partners...","timestamp":"2026-01-08 17:29:04"}
+{"level":"info","message":"✅ Created 15 delivery partners","timestamp":"2026-01-08 17:29:04"}
+{"level":"info","message":"\nCreating orders...","timestamp":"2026-01-08 17:29:04"}
+{"code":11000,"errorLabelSet":{},"errorResponse":{"code":11000,"message":"E11000 duplicate key error collection: test.orders index: orderId_1 dup key: { orderId: \"ORD1767873543093070\" }","writeErrors":[{"err":{"code":11000,"errmsg":"E11000 duplicate key error collection: test.orders index: orderId_1 dup key: { orderId: \"ORD1767873543093070\" }","index":13,"op":{"__v":0,"_id":"695f9c0841b7fd49eeb73645","createdAt":"2026-01-07T18:59:03.093Z","deliveryAddress":{"_id":"695f9c0841b7fd49eeb73647","addressLine1":"Flat 113, Tower B","addressLine2":"Mantri Residency","city":"Hyderabad","latitude":17.434561982844823,"longitude":78.4635459702074,"name":"Sneha Reddy","phone":"9876500013","pincode":"500090","state":"Telangana"},"deliveryPartnerId":null,"items":[{"_id":"695f9c0841b7fd49eeb73646","mrp":54,"name":"Amul Milk","price":50,"productId":"695f9c0841b7fd49eeb734f5","quantity":2,"variantId":"v1","variantLabel":"1L"}],"needBag":false,"orderId":"ORD1767873543093070","payment":{"_id":"695f9c0841b7fd49eeb73648","method":"online","status":"success"},"pricing":{"_id":"695f9c0841b7fd49eeb73649","deliveryFee":0,"grandTotal":158.87248234086746,"handlingFee":5,"itemTotal":243.81253837151658,"tip":0,"totalSavings":65},"status":"confirmed","statusHistory":[{"_id":"695f9c0841b7fd49eeb7364a","note":"Order placed successfully","status":"placed","timestamp":"2026-01-07T18:59:03.093Z"}],"updatedAt":"2026-01-08T11:59:04.592Z","userId":"695f9c0841b7fd49eeb7358f"}},"index":13}]},"insertedDocs":[{"__v":0,"_id":"695f9c0841b7fd49eeb735e2","createdAt":"2026-01-07T05:59:03.093Z","deliveryAddress":{"_id":"695f9c0841b7fd49eeb735e6","addressLine1":"Flat 100, Tower A","addressLine2":"Prestige Apartments","city":"Hyderabad","latitude":17.336798400561797,"longitude":78.51506943018907,"name":"Rahul Sharma","phone":"9876500000","pincode":"500001","state":"Telangana"},"deliveryPartnerId":null,"items":[{"_id":"695f9c0841b7fd49eeb735e3","mrp":54,"name":"Amul Milk","price":50,"productId":"695f9c0841b7fd49eeb73556","quantity":2,"variantId":"v1","variantLabel":"1L"},{"_id":"695f9c0841b7fd49eeb735e4","mrp":40,"name":"Fresh Tomatoes","price":35,"productId":"695f9c0841b7fd49eeb7345c","quantity":1,"variantId":"v2","variantLabel":"500g"},{"_id":"695f9c0841b7fd49eeb735e5","mrp":56,"name":"Maggi Noodles","price":52,"productId":"695f9c0841b7fd49eeb73453","quantity":2,"variantId":"v3","variantLabel":"280g"}],"needBag":false,"orderId":"ORD1767873543093780","payment":{"_id":"695f9c0841b7fd49eeb735e7","method":"cod","status":"success"},"pricing":{"_id":"695f9c0841b7fd49eeb735e8","deliveryFee":0,"grandTotal":551.3005293057352,"handlingFee":5,"itemTotal":403.5454002195818,"tip":20,"totalSavings":27},"status":"placed","statusHistory":[{"_id":"695f9c0841b7fd49eeb735e9","note":"Order placed successfully","status":"placed","timestamp":"2026-01-07T05:59:03.093Z"}],"updatedAt":"2026-01-08T11:59:04.591Z","userId":"695f9c0841b7fd49eeb73582"},{"__v":0,"_id":"695f9c0841b7fd49eeb735ea","createdAt":"2026-01-07T06:59:03.093Z","deliveryAddress":{"_id":"695f9c0841b7fd49eeb735ef","addressLine1":"Flat 101, Tower B","addressLine2":"Mantri Residency","city":"Hyderabad","latitude":17.424305216032373,"longitude":78.53157244184656,"name":"Priya Patel","phone":"9876500001","pincode":"500003","state":"Telangana"},"deliveryPartnerId":null,"items":[{"_id":"695f9c0841b7fd49eeb735eb","mrp":54,"name":"Amul Milk","price":50,"productId":"695f9c0841b7fd49eeb7356b","quantity":2,"variantId":"v1","variantLabel":"1L"},{"_id":"695f9c0841b7fd49eeb735ec","mrp":40,"name":"Fresh Tomatoes","price":35,"productId":"695f9c0841b7fd49eeb73561","quantity":2,"variantId":"v2","variantLabel":"500g"},{"_id":"695f9c0841b7fd49eeb735ed","mrp":56,"name":"Maggi Noodles","price":52,"productId":"695f9c0841b7fd49eeb7343c","quantity":3,"variantId":"v3","variantLabel":"280g"},{"_id":"695f9c0841b7fd49eeb735ee","mrp":20,"name":"Lays Chips","price":20,"productId":"695f9c0841b7fd49eeb734cf","quantity":1,"variantId":"v4","variantLabel":"52g"}],"needBag":false,"orderId":"ORD1767873543093375","payment":{"_id":"695f9c0841b7fd49eeb735f0","method":"online","status":"success"},"pricing":{"_id":"695f9c0841b7fd49eeb735f1","deliveryFee":0,"grandTotal":223.6423049807666,"handlingFee":5,"itemTotal":534.9188745208105,"tip":0,"totalSavings":52},"status":"confirmed","statusHistory":[{"_id":"695f9c0841b7fd49eeb735f2","note":"Order placed successfully","status":"placed","timestamp":"2026-01-07T06:59:03.093Z"}],"updatedAt":"2026-01-08T11:59:04.591Z","userId":"695f9c0841b7fd49eeb73583"},{"__v":0,"_id":"695f9c0841b7fd49eeb735f3","createdAt":"2026-01-07T07:59:03.093Z","deliveryAddress":{"_id":"695f9c0841b7fd49eeb735f5","addressLine1":"Flat 102, Tower C","addressLine2":"Aparna Towers","city":"Hyderabad","latitude":17.343392550160637,"longitude":78.51862548726804,"name":"Amit Kumar","phone":"9876500002","pincode":"500004","state":"Telangana"},"deliveryPartnerId":null,"items":[{"_id":"695f9c0841b7fd49eeb735f4","mrp":54,"name":"Amul Milk","price":50,"productId":"695f9c0841b7fd49eeb73456","quantity":1,"variantId":"v1","variantLabel":"1L"}],"needBag":false,"orderId":"ORD1767873543093194","payment":{"_id":"695f9c0841b7fd49eeb735f6","method":"upi","status":"success"},"pricing":{"_id":"695f9c0841b7fd49eeb735f7","deliveryFee":0,"grandTotal":322.68409637603617,"handlingFee":5,"itemTotal":535.7035253424428,"tip":0,"totalSavings":69},"status":"packing","statusHistory":[{"_id":"695f9c0841b7fd49eeb735f8","note":"Order placed successfully","status":"placed","timestamp":"2026-01-07T07:59:03.093Z"}],"updatedAt":"2026-01-08T11:59:04.591Z","userId":"695f9c0841b7fd49eeb73584"},{"__v":0,"_id":"695f9c0841b7fd49eeb735f9","createdAt":"2026-01-07T08:59:03.093Z","deliveryAddress":{"_id":"695f9c0841b7fd49eeb735fe","addressLine1":"Flat 103, Tower D","addressLine2":"My Home Hub","city":"Hyderabad","latitude":17.409602499710548,"longitude":78.53569640102099,"name":"Sneha Reddy","phone":"9876500003","pincode":"500012","state":"Telangana"},"deliveryPartnerId":"695f9c0841b7fd49eeb735d0","items":[{"_id":"695f9c0841b7fd49eeb735fa","mrp":54,"name":"Amul Milk","price":50,"productId":"695f9c0841b7fd49eeb7355d","quantity":2,"variantId":"v1","variantLabel":"1L"},{"_id":"695f9c0841b7fd49eeb735fb","mrp":40,"name":"Fresh Tomatoes","price":35,"productId":"695f9c0841b7fd49eeb73428","quantity":2,"variantId":"v2","variantLabel":"500g"},{"_id":"695f9c0841b7fd49eeb735fc","mrp":56,"name":"Maggi Noodles","price":52,"productId":"695f9c0841b7fd49eeb73501","quantity":3,"variantId":"v3","variantLabel":"280g"},{"_id":"695f9c0841b7fd49eeb735fd","mrp":20,"name":"Lays Chips","price":20,"productId":"695f9c0841b7fd49eeb734cc","quantity":1,"variantId":"v4","variantLabel":"52g"}],"needBag":false,"orderId":"ORD1767873543093316","payment":{"_id":"695f9c0841b7fd49eeb735ff","method":"cod","status":"success"},"pricing":{"_id":"695f9c0841b7fd49eeb73600","deliveryFee":0,"grandTotal":189.0975817088589,"handlingFee":5,"itemTotal":370.1586156063936,"tip":0,"totalSavings":45},"status":"out_for_delivery","statusHistory":[{"_id":"695f9c0841b7fd49eeb73601","note":"Order placed successfully","status":"placed","timestamp":"2026-01-07T08:59:03.093Z"}],"updatedAt":"2026-01-08T11:59:04.591Z","userId":"695f9c0841b7fd49eeb73585"},{"__v":0,"_id":"695f9c0841b7fd49eeb73602","createdAt":"2026-01-07T09:59:03.093Z","deliveryAddress":{"_id":"695f9c0841b7fd49eeb73605","addressLine1":"Flat 104, Tower A","addressLine2":"Prestige Apartments","city":"Hyderabad","latitude":17.39103285001384,"longitude":78.43852990563613,"name":"Vikram Singh","phone":"9876500004","pincode":"500016","state":"Telangana"},"deliveryPartnerId":"695f9c0841b7fd49eeb735d1","items":[{"_id":"695f9c0841b7fd49eeb73603","mrp":54,"name":"Amul Milk","price":50,"productId":"695f9c0841b7fd49eeb73464","quantity":3,"variantId":"v1","variantLabel":"1L"},{"_id":"695f9c0841b7fd49eeb73604","mrp":40,"name":"Fresh Tomatoes","price":35,"productId":"695f9c0841b7fd49eeb73556","quantity":1,"variantId":"v2","variantLabel":"500g"}],"needBag":false,"orderId":"ORD1767873543093344","payment":{"_id":"695f9c0841b7fd49eeb73606","method":"online","status":"success"},"pricing":{"_id":"695f9c0841b7fd49eeb73607","deliveryFee":0,"grandTotal":261.9824860288912,"handlingFee":5,"itemTotal":223.71147367096523,"tip":20,"totalSavings":30},"status":"delivered","statusHistory":[{"_id":"695f9c0841b7fd49eeb73608","note":"Order placed successfully","status":"placed","timestamp":"2026-01-07T09:59:03.093Z"}],"updatedAt":"2026-01-08T11:59:04.591Z","userId":"695f9c0841b7fd49eeb73586"},{"__v":0,"_id":"695f9c0841b7fd49eeb73609","createdAt":"2026-01-07T10:59:03.093Z","deliveryAddress":{"_id":"695f9c0841b7fd49eeb7360d","addressLine1":"Flat 105, Tower B","addressLine2":"Mantri Residency","city":"Hyderabad","latitude":17.373985017771435,"longitude":78.4490908767002,"name":"Anjali Gupta","phone":"9876500005","pincode":"500028","state":"Telangana"},"deliveryPartnerId":null,"items":[{"_id":"695f9c0841b7fd49eeb7360a","mrp":54,"name":"Amul Milk","price":50,"productId":"695f9c0841b7fd49eeb734d9","quantity":1,"variantId":"v1","variantLabel":"1L"},{"_id":"695f9c0841b7fd49eeb7360b","mrp":40,"name":"Fresh Tomatoes","price":35,"productId":"695f9c0841b7fd49eeb734e3","quantity":1,"variantId":"v2","variantLabel":"500g"},{"_id":"695f9c0841b7fd49eeb7360c","mrp":56,"name":"Maggi Noodles","price":52,"productId":"695f9c0841b7fd49eeb7354d","quantity":1,"variantId":"v3","variantLabel":"280g"}],"needBag":false,"orderId":"ORD1767873543093984","payment":{"_id":"695f9c0841b7fd49eeb7360e","method":"upi","status":"pending"},"pricing":{"_id":"695f9c0841b7fd49eeb7360f","deliveryFee":0,"grandTotal":542.0683152988613,"handlingFee":5,"itemTotal":406.5430106970241,"tip":0,"totalSavings":56},"status":"cancelled","statusHistory":[{"_id":"695f9c0841b7fd49eeb73610","note":"Order placed successfully","status":"placed","timestamp":"2026-01-07T10:59:03.093Z"}],"updatedAt":"2026-01-08T11:59:04.592Z","userId":"695f9c0841b7fd49eeb73587"},{"__v":0,"_id":"695f9c0841b7fd49eeb73611","createdAt":"2026-01-07T11:59:03.093Z","deliveryAddress":{"_id":"695f9c0841b7fd49eeb73616","addressLine1":"Flat 106, Tower C","addressLine2":"Aparna Towers","city":"Hyderabad","latitude":17.385993468180143,"longitude":78.47897472898619,"name":"Rajesh Nair","phone":"9876500006","pincode":"500029","state":"Telangana"},"deliveryPartnerId":null,"items":[{"_id":"695f9c0841b7fd49eeb73612","mrp":54,"name":"Amul Milk","price":50,"productId":"695f9c0841b7fd49eeb73473","quantity":2,"variantId":"v1","variantLabel":"1L"},{"_id":"695f9c0841b7fd49eeb73613","mrp":40,"name":"Fresh Tomatoes","price":35,"productId":"695f9c0841b7fd49eeb73464","quantity":1,"variantId":"v2","variantLabel":"500g"},{"_id":"695f9c0841b7fd49eeb73614","mrp":56,"name":"Maggi Noodles","price":52,"productId":"695f9c0841b7fd49eeb73444","quantity":1,"variantId":"v3","variantLabel":"280g"},{"_id":"695f9c0841b7fd49eeb73615","mrp":20,"name":"Lays Chips","price":20,"productId":"695f9c0841b7fd49eeb734f2","quantity":2,"variantId":"v4","variantLabel":"52g"}],"needBag":false,"orderId":"ORD1767873543093151","payment":{"_id":"695f9c0841b7fd49eeb73617","method":"cod","status":"success"},"pricing":{"_id":"695f9c0841b7fd49eeb73618","deliveryFee":0,"grandTotal":168.9949149142784,"handlingFee":5,"itemTotal":547.0794708611995,"tip":0,"totalSavings":36},"status":"placed","statusHistory":[{"_id":"695f9c0841b7fd49eeb73619","note":"Order placed successfully","status":"placed","timestamp":"2026-01-07T11:59:03.093Z"}],"updatedAt":"2026-01-08T11:59:04.592Z","userId":"695f9c0841b7fd49eeb73588"},{"__v":0,"_id":"695f9c0841b7fd49eeb7361a","createdAt":"2026-01-07T12:59:03.093Z","deliveryAddress":{"_id":"695f9c0841b7fd49eeb7361e","addressLine1":"Flat 107, Tower D","addressLine2":"My Home Hub","city":"Hyderabad","latitude":17.429392614055732,"longitude":78.45642545969008,"name":"Deepika Iyer","phone":"9876500007","pincode":"500032","state":"Telangana"},"deliveryPartnerId":null,"items":[{"_id":"695f9c0841b7fd49eeb7361b","mrp":54,"name":"Amul Milk","price":50,"productId":"695f9c0841b7fd49eeb7348b","quantity":3,"variantId":"v1","variantLabel":"1L"},{"_id":"695f9c0841b7fd49eeb7361c","mrp":40,"name":"Fresh Tomatoes","price":35,"productId":"695f9c0841b7fd49eeb734dd","quantity":1,"variantId":"v2","variantLabel":"500g"},{"_id":"695f9c0841b7fd49eeb7361d","mrp":56,"name":"Maggi Noodles","price":52,"productId":"695f9c0841b7fd49eeb734b7","quantity":3,"variantId":"v3","variantLabel":"280g"}],"needBag":false,"orderId":"ORD1767873543093099","payment":{"_id":"695f9c0841b7fd49eeb7361f","method":"online","status":"success"},"pricing":{"_id":"695f9c0841b7fd49eeb73620","deliveryFee":0,"grandTotal":475.16052019956004,"handlingFee":5,"itemTotal":378.51206397565704,"tip":0,"totalSavings":50},"status":"confirmed","statusHistory":[{"_id":"695f9c0841b7fd49eeb73621","note":"Order placed successfully","status":"placed","timestamp":"2026-01-07T12:59:03.093Z"}],"updatedAt":"2026-01-08T11:59:04.592Z","userId":"695f9c0841b7fd49eeb73589"},{"__v":0,"_id":"695f9c0841b7fd49eeb73622","createdAt":"2026-01-07T13:59:03.093Z","deliveryAddress":{"_id":"695f9c0841b7fd49eeb73624","addressLine1":"Flat 108, Tower A","addressLine2":"Prestige Apartments","city":"Hyderabad","latitude":17.368246876120228,"longitude":78.44186177551184,"name":"Suresh Menon","phone":"9876500008","pincode":"500034","state":"Telangana"},"deliveryPartnerId":null,"items":[{"_id":"695f9c0841b7fd49eeb73623","mrp":54,"name":"Amul Milk","price":50,"productId":"695f9c0841b7fd49eeb7352e","quantity":1,"variantId":"v1","variantLabel":"1L"}],"needBag":false,"orderId":"ORD1767873543093554","payment":{"_id":"695f9c0841b7fd49eeb73625","method":"upi","status":"success"},"pricing":{"_id":"695f9c0841b7fd49eeb73626","deliveryFee":0,"grandTotal":160.04443784681524,"handlingFee":5,"itemTotal":510.1359721906175,"tip":20,"totalSavings":39},"status":"packing","statusHistory":[{"_id":"695f9c0841b7fd49eeb73627","note":"Order placed successfully","status":"placed","timestamp":"2026-01-07T13:59:03.093Z"}],"updatedAt":"2026-01-08T11:59:04.592Z","userId":"695f9c0841b7fd49eeb7358a"},{"__v":0,"_id":"695f9c0841b7fd49eeb73628","createdAt":"2026-01-07T14:59:03.093Z","deliveryAddress":{"_id":"695f9c0841b7fd49eeb7362c","addressLine1":"Flat 109, Tower B","addressLine2":"Mantri Residency","city":"Hyderabad","latitude":17.374181382192102,"longitude":78.47201183217587,"name":"Kavitha Rao","phone":"9876500009","pincode":"500044","state":"Telangana"},"deliveryPartnerId":"695f9c0841b7fd49eeb735d6","items":[{"_id":"695f9c0841b7fd49eeb73629","mrp":54,"name":"Amul Milk","price":50,"productId":"695f9c0841b7fd49eeb73450","quantity":1,"variantId":"v1","variantLabel":"1L"},{"_id":"695f9c0841b7fd49eeb7362a","mrp":40,"name":"Fresh Tomatoes","price":35,"productId":"695f9c0841b7fd49eeb7352b","quantity":3,"variantId":"v2","variantLabel":"500g"},{"_id":"695f9c0841b7fd49eeb7362b","mrp":56,"name":"Maggi Noodles","price":52,"productId":"695f9c0841b7fd49eeb7356e","quantity":1,"variantId":"v3","variantLabel":"280g"}],"needBag":false,"orderId":"ORD1767873543093070","payment":{"_id":"695f9c0841b7fd49eeb7362d","method":"cod","status":"success"},"pricing":{"_id":"695f9c0841b7fd49eeb7362e","deliveryFee":0,"grandTotal":195.32698244501702,"handlingFee":5,"itemTotal":518.6727922143118,"tip":0,"totalSavings":66},"status":"out_for_delivery","statusHistory":[{"_id":"695f9c0841b7fd49eeb7362f","note":"Order placed successfully","status":"placed","timestamp":"2026-01-07T14:59:03.093Z"}],"updatedAt":"2026-01-08T11:59:04.592Z","userId":"695f9c0841b7fd49eeb7358b"},{"__v":0,"_id":"695f9c0841b7fd49eeb73630","createdAt":"2026-01-07T15:59:03.093Z","deliveryAddress":{"_id":"695f9c0841b7fd49eeb73632","addressLine1":"Flat 110, Tower C","addressLine2":"Aparna Towers","city":"Hyderabad","latitude":17.356232357110194,"longitude":78.52747557057253,"name":"Rahul Sharma","phone":"9876500010","pincode":"500081","state":"Telangana"},"deliveryPartnerId":"695f9c0841b7fd49eeb735d7","items":[{"_id":"695f9c0841b7fd49eeb73631","mrp":54,"name":"Amul Milk","price":50,"productId":"695f9c0841b7fd49eeb734c1","quantity":1,"variantId":"v1","variantLabel":"1L"}],"needBag":false,"orderId":"ORD1767873543093303","payment":{"_id":"695f9c0841b7fd49eeb73633","method":"online","status":"success"},"pricing":{"_id":"695f9c0841b7fd49eeb73634","deliveryFee":0,"grandTotal":158.2783319179347,"handlingFee":5,"itemTotal":409.4239935628655,"tip":0,"totalSavings":32},"status":"delivered","statusHistory":[{"_id":"695f9c0841b7fd49eeb73635","note":"Order placed successfully","status":"placed","timestamp":"2026-01-07T15:59:03.093Z"}],"updatedAt":"2026-01-08T11:59:04.592Z","userId":"695f9c0841b7fd49eeb7358c"},{"__v":0,"_id":"695f9c0841b7fd49eeb73636","createdAt":"2026-01-07T16:59:03.093Z","deliveryAddress":{"_id":"695f9c0841b7fd49eeb7363a","addressLine1":"Flat 111, Tower D","addressLine2":"My Home Hub","city":"Hyderabad","latitude":17.379543797925898,"longitude":78.44807569181211,"name":"Priya Patel","phone":"9876500011","pincode":"500082","state":"Telangana"},"deliveryPartnerId":null,"items":[{"_id":"695f9c0841b7fd49eeb73637","mrp":54,"name":"Amul Milk","price":50,"productId":"695f9c0841b7fd49eeb734cf","quantity":2,"variantId":"v1","variantLabel":"1L"},{"_id":"695f9c0841b7fd49eeb73638","mrp":40,"name":"Fresh Tomatoes","price":35,"productId":"695f9c0841b7fd49eeb7356e","quantity":3,"variantId":"v2","variantLabel":"500g"},{"_id":"695f9c0841b7fd49eeb73639","mrp":56,"name":"Maggi Noodles","price":52,"productId":"695f9c0841b7fd49eeb7352b","quantity":2,"variantId":"v3","variantLabel":"280g"}],"needBag":false,"orderId":"ORD1767873543093539","payment":{"_id":"695f9c0841b7fd49eeb7363b","method":"upi","status":"pending"},"pricing":{"_id":"695f9c0841b7fd49eeb7363c","deliveryFee":0,"grandTotal":304.9526439683053,"handlingFee":5,"itemTotal":168.13728298056407,"tip":0,"totalSavings":47},"status":"cancelled","statusHistory":[{"_id":"695f9c0841b7fd49eeb7363d","note":"Order placed successfully","status":"placed","timestamp":"2026-01-07T16:59:03.093Z"}],"updatedAt":"2026-01-08T11:59:04.592Z","userId":"695f9c0841b7fd49eeb7358d"},{"__v":0,"_id":"695f9c0841b7fd49eeb7363e","createdAt":"2026-01-07T17:59:03.093Z","deliveryAddress":{"_id":"695f9c0841b7fd49eeb73641","addressLine1":"Flat 112, Tower A","addressLine2":"Prestige Apartments","city":"Hyderabad","latitude":17.342004002904744,"longitude":78.53141982957223,"name":"Amit Kumar","phone":"9876500012","pincode":"500084","state":"Telangana"},"deliveryPartnerId":null,"items":[{"_id":"695f9c0841b7fd49eeb7363f","mrp":54,"name":"Amul Milk","price":50,"productId":"695f9c0841b7fd49eeb7352b","quantity":1,"variantId":"v1","variantLabel":"1L"},{"_id":"695f9c0841b7fd49eeb73640","mrp":40,"name":"Fresh Tomatoes","price":35,"productId":"695f9c0841b7fd49eeb734b4","quantity":3,"variantId":"v2","variantLabel":"500g"}],"needBag":false,"orderId":"ORD1767873543093150","payment":{"_id":"695f9c0841b7fd49eeb73642","method":"cod","status":"success"},"pricing":{"_id":"695f9c0841b7fd49eeb73643","deliveryFee":0,"grandTotal":242.23072769200087,"handlingFee":5,"itemTotal":442.1121763810662,"tip":20,"totalSavings":44},"status":"placed","statusHistory":[{"_id":"695f9c0841b7fd49eeb73644","note":"Order placed successfully","status":"placed","timestamp":"2026-01-07T17:59:03.093Z"}],"updatedAt":"2026-01-08T11:59:04.592Z","userId":"695f9c0841b7fd49eeb7358e"}],"level":"error","message":"❌ Seeding error: E11000 duplicate key error collection: test.orders index: orderId_1 dup key: { orderId: \"ORD1767873543093070\" }","result":{"deletedCount":0,"insertedCount":13,"insertedIds":{"0":"695f9c0841b7fd49eeb735e2","1":"695f9c0841b7fd49eeb735ea","10":"695f9c0841b7fd49eeb73630","11":"695f9c0841b7fd49eeb73636","12":"695f9c0841b7fd49eeb7363e","2":"695f9c0841b7fd49eeb735f3","3":"695f9c0841b7fd49eeb735f9","4":"695f9c0841b7fd49eeb73602","5":"695f9c0841b7fd49eeb73609","6":"695f9c0841b7fd49eeb73611","7":"695f9c0841b7fd49eeb7361a","8":"695f9c0841b7fd49eeb73622","9":"695f9c0841b7fd49eeb73628"},"matchedCount":0,"modifiedCount":0,"upsertedCount":0,"upsertedIds":{}},"stack":"MongoBulkWriteError: E11000 duplicate key error collection: test.orders index: orderId_1 dup key: { orderId: \"ORD1767873543093070\" }\n    at OrderedBulkOperation.handleWriteError (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/mongodb/lib/bulk/common.js:804:19)\n    at executeCommands (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/mongodb/lib/bulk/common.js:346:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/mongodb/lib/bulk/common.js:790:24\n    at async MongoClient.withSession (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/mongodb/lib/mongo_client.js:477:20)\n    at async OrderedBulkOperation.execute (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/mongodb/lib/bulk/common.js:789:20)\n    at async Collection.bulkWrite (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/mongodb/lib/collection.js:224:16)\n    at async Collection.insertMany (/Users/deepanshusharma/Documents/Kk/Zipto/zipto-dev-bk/backend/node_modules/mongodb/lib/collection.js:171:25)","timestamp":"2026-01-08 17:29:04","writeErrors":[{"err":{"code":11000,"errmsg":"E11000 duplicate key error collection: test.orders index: orderId_1 dup key: { orderId: \"ORD1767873543093070\" }","index":13,"op":{"__v":0,"_id":"695f9c0841b7fd49eeb73645","createdAt":"2026-01-07T18:59:03.093Z","deliveryAddress":{"_id":"695f9c0841b7fd49eeb73647","addressLine1":"Flat 113, Tower B","addressLine2":"Mantri Residency","city":"Hyderabad","latitude":17.434561982844823,"longitude":78.4635459702074,"name":"Sneha Reddy","phone":"9876500013","pincode":"500090","state":"Telangana"},"deliveryPartnerId":null,"items":[{"_id":"695f9c0841b7fd49eeb73646","mrp":54,"name":"Amul Milk","price":50,"productId":"695f9c0841b7fd49eeb734f5","quantity":2,"variantId":"v1","variantLabel":"1L"}],"needBag":false,"orderId":"ORD1767873543093070","payment":{"_id":"695f9c0841b7fd49eeb73648","method":"online","status":"success"},"pricing":{"_id":"695f9c0841b7fd49eeb73649","deliveryFee":0,"grandTotal":158.87248234086746,"handlingFee":5,"itemTotal":243.81253837151658,"tip":0,"totalSavings":65},"status":"confirmed","statusHistory":[{"_id":"695f9c0841b7fd49eeb7364a","note":"Order placed successfully","status":"placed","timestamp":"2026-01-07T18:59:03.093Z"}],"updatedAt":"2026-01-08T11:59:04.592Z","userId":"695f9c0841b7fd49eeb7358f"}},"index":13}]}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-02.dzddd4y.mongodb.net","timestamp":"2026-01-08 17:29:53"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 17:29:53"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 17:29:53"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 17:29:53"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 17:29:53"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 17:29:53"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 17:29:53"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 17:29:53"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 17:29:53"}
+{"level":"info","message":"Socket connected: bYDwnWRNQ0p6AwtDAAAB (admin)","timestamp":"2026-01-08 17:29:55"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 17:29:55"}
+{"level":"info","message":"Socket disconnected: bYDwnWRNQ0p6AwtDAAAB","timestamp":"2026-01-08 17:29:56"}
+{"level":"info","message":"Socket connected: 9-VBiIupu53qd-T2AAAD (admin)","timestamp":"2026-01-08 17:29:57"}
+{"level":"info","message":"Admin 695dff1f854d45675420637e joined admin room","timestamp":"2026-01-08 17:29:57"}
+{"level":"info","message":"Socket disconnected: 9-VBiIupu53qd-T2AAAD","timestamp":"2026-01-08 17:29:57"}
+{"adminId":"695f9c0741b7fd49eeb7340f","ip":"::1","level":"info","message":"AUDIT: Admin Login","role":"super_admin","timestamp":"2026-01-08T12:00:04.109Z","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","username":"admin"}
+{"level":"info","message":"Socket connected: Tuv0BSFSSa54UBOkAAAF (admin)","timestamp":"2026-01-08 17:30:04"}
+{"level":"info","message":"Admin 695f9c0741b7fd49eeb7340f joined admin room","timestamp":"2026-01-08 17:30:04"}
+{"level":"info","message":"🌱 Starting database seeding...\n","timestamp":"2026-01-08 17:30:23"}
+{"level":"info","message":"✅ Connected to MongoDB Atlas","timestamp":"2026-01-08 17:30:24"}
+{"level":"info","message":"Clearing existing data...","timestamp":"2026-01-08 17:30:24"}
+{"level":"info","message":"✅ Existing data cleared","timestamp":"2026-01-08 17:30:24"}
+{"level":"info","message":"Creating admin user...","timestamp":"2026-01-08 17:30:24"}
+{"level":"info","message":"✅ Admin created: admin","timestamp":"2026-01-08 17:30:25"}
+{"level":"info","message":"\nCreating categories...","timestamp":"2026-01-08 17:30:25"}
+{"level":"info","message":"✅ Created 10 categories","timestamp":"2026-01-08 17:30:25"}
+{"level":"info","message":"\nCreating products...","timestamp":"2026-01-08 17:30:25"}
+{"level":"info","message":"✅ Created 99 products","timestamp":"2026-01-08 17:30:25"}
+{"level":"info","message":"\nCreating users...","timestamp":"2026-01-08 17:30:25"}
+{"level":"info","message":"✅ Created 50 users","timestamp":"2026-01-08 17:30:25"}
+{"level":"info","message":"\nCreating serviceable locations...","timestamp":"2026-01-08 17:30:25"}
+{"level":"info","message":"✅ Created 15 locations","timestamp":"2026-01-08 17:30:25"}
+{"level":"info","message":"\nCreating delivery partners...","timestamp":"2026-01-08 17:30:25"}
+{"level":"info","message":"✅ Created 15 delivery partners","timestamp":"2026-01-08 17:30:25"}
+{"level":"info","message":"\nCreating orders...","timestamp":"2026-01-08 17:30:25"}
+{"level":"info","message":"✅ Created 30 orders","timestamp":"2026-01-08 17:30:26"}
+{"level":"info","message":"\nCreating banners...","timestamp":"2026-01-08 17:30:26"}
+{"level":"info","message":"✅ Created 6 banners","timestamp":"2026-01-08 17:30:26"}
+{"level":"info","message":"\nCreating shelves...","timestamp":"2026-01-08 17:30:26"}
+{"level":"info","message":"✅ Created 8 shelves","timestamp":"2026-01-08 17:30:26"}
+{"level":"info","message":"\nCreating analytics events...","timestamp":"2026-01-08 17:30:26"}
+{"level":"info","message":"✅ Created 100 analytics events","timestamp":"2026-01-08 17:30:26"}
+{"level":"info","message":"Socket disconnected: Tuv0BSFSSa54UBOkAAAF","timestamp":"2026-01-08 17:30:47"}
+{"adminId":"695f9c5895a7c5ebe17a3a6d","ip":"::1","level":"info","message":"AUDIT: Admin Login","role":"super_admin","timestamp":"2026-01-08T12:00:58.101Z","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","username":"admin"}
+{"level":"info","message":"Socket connected: 97NotTxRZjjqpjvPAAAH (admin)","timestamp":"2026-01-08 17:30:58"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-08 17:30:58"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-02.dzddd4y.mongodb.net","timestamp":"2026-01-08 17:54:37"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 17:54:37"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 17:54:37"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 17:54:37"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 17:54:37"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 17:54:37"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 17:54:37"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 17:54:37"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 17:54:37"}
+{"level":"info","message":"Socket connected: vAsVApZhyeYLow3BAAAB (admin)","timestamp":"2026-01-08 17:54:39"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-08 17:54:39"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-08 17:55:45"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 17:55:45"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 17:55:45"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 17:55:45"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 17:55:45"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 17:55:45"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 17:55:45"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 17:55:45"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 17:55:45"}
+{"level":"info","message":"Socket connected: 4Lux1dotTEe7cKkHAAAB (admin)","timestamp":"2026-01-08 17:55:46"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-08 17:55:46"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-08 17:55:49"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 17:55:49"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 17:55:49"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 17:55:49"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 17:55:49"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 17:55:49"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 17:55:49"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 17:55:49"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 17:55:49"}
+{"level":"info","message":"Socket connected: 9w7VfSFlJ5uwMB3rAAAB (admin)","timestamp":"2026-01-08 17:55:50"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-08 17:55:50"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-08 17:55:53"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 17:55:53"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 17:55:53"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 17:55:53"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 17:55:53"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 17:55:53"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 17:55:53"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 17:55:53"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 17:55:53"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-08 17:55:56"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 17:55:56"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 17:55:56"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 17:55:56"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 17:55:56"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 17:55:56"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 17:55:56"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 17:55:56"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 17:55:56"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-08 17:56:00"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 17:56:00"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 17:56:00"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 17:56:00"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 17:56:00"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 17:56:00"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 17:56:00"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 17:56:00"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 17:56:00"}
+{"level":"info","message":"Socket connected: nPea3NP3AIa_FnOcAAAB (admin)","timestamp":"2026-01-08 17:56:01"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-08 17:56:01"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-08 17:56:13"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 17:56:13"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 17:56:13"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 17:56:13"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 17:56:13"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 17:56:13"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 17:56:13"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 17:56:13"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 17:56:13"}
+{"level":"info","message":"Socket connected: LKveP89mo4VCX4HVAAAB (admin)","timestamp":"2026-01-08 17:56:14"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-08 17:56:14"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-08 17:56:17"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 17:56:17"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 17:56:17"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 17:56:17"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 17:56:17"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 17:56:17"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 17:56:17"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 17:56:17"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 17:56:17"}
+{"level":"info","message":"Socket connected: kcoaQwT6pGKFZzBvAAAB (admin)","timestamp":"2026-01-08 17:56:18"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-08 17:56:18"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-08 17:56:20"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 17:56:20"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 17:56:20"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 17:56:20"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 17:56:20"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 17:56:20"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 17:56:20"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 17:56:20"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 17:56:20"}
+{"level":"info","message":"Socket connected: S8yN1lsh4ry1HaDuAAAB (admin)","timestamp":"2026-01-08 17:56:21"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-08 17:56:21"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-08 17:56:24"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 17:56:24"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 17:56:24"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 17:56:24"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 17:56:24"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 17:56:24"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 17:56:24"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 17:56:24"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 17:56:24"}
+{"level":"info","message":"Socket connected: TY5k51FJCxjSddKFAAAB (admin)","timestamp":"2026-01-08 17:56:25"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-08 17:56:25"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-08 17:56:36"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 17:56:36"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 17:56:36"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 17:56:36"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 17:56:36"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 17:56:36"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 17:56:36"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 17:56:36"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 17:56:36"}
+{"level":"info","message":"Socket connected: T41BkWaNhI8lyS_9AAAB (admin)","timestamp":"2026-01-08 17:56:39"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-08 17:56:39"}
+{"level":"info","message":"\nSIGINT received. Starting graceful shutdown...","timestamp":"2026-01-08 17:57:41"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-08 17:57:43"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 17:57:43"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 17:57:43"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 17:57:43"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 17:57:43"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 17:57:43"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 17:57:43"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 17:57:43"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 17:57:43"}
+{"level":"info","message":"Socket connected: AWI5aP5VTnalN2RtAAAB (admin)","timestamp":"2026-01-08 17:57:44"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-08 17:57:44"}
+{"level":"info","message":"Socket disconnected: AWI5aP5VTnalN2RtAAAB","timestamp":"2026-01-08 17:57:54"}
+{"level":"info","message":"Socket connected: 7Jg_H7aYu8_Nbkr8AAAD (admin)","timestamp":"2026-01-08 17:57:54"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-08 17:57:54"}
+{"level":"info","message":"Socket disconnected: 7Jg_H7aYu8_Nbkr8AAAD","timestamp":"2026-01-08 18:04:31"}
+{"adminId":"695f9c5895a7c5ebe17a3a6d","ip":"::1","level":"info","message":"AUDIT: Admin Login","role":"super_admin","timestamp":"2026-01-08T12:34:36.488Z","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","username":"admin"}
+{"level":"info","message":"Socket connected: chOGhrndI8laxwJnAAAF (admin)","timestamp":"2026-01-08 18:04:36"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-08 18:04:36"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-01.dzddd4y.mongodb.net","timestamp":"2026-01-08 18:06:04"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 18:06:04"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 18:06:04"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 18:06:04"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 18:06:04"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 18:06:04"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 18:06:04"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 18:06:04"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 18:06:04"}
+{"level":"info","message":"Socket connected: MBOYMiNDpsO_WtcJAAAB (admin)","timestamp":"2026-01-08 18:06:05"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-08 18:06:05"}
+{"level":"info","message":"✅ MongoDB Atlas Connected: ac-qysw4jt-shard-00-00.dzddd4y.mongodb.net","timestamp":"2026-01-08 18:17:05"}
+{"level":"info","message":"📦 Database: test","timestamp":"2026-01-08 18:17:05"}
+{"level":"info","message":"ℹ️  Redis disabled","timestamp":"2026-01-08 18:17:05"}
+{"level":"info","message":"✅ Socket.io initialized","timestamp":"2026-01-08 18:17:05"}
+{"level":"info","message":"ℹ️  Cron jobs disabled in development","timestamp":"2026-01-08 18:17:05"}
+{"level":"info","message":"🚀 Server running on port 3008","timestamp":"2026-01-08 18:17:05"}
+{"level":"info","message":"📍 Environment: development","timestamp":"2026-01-08 18:17:05"}
+{"level":"info","message":"🔗 API: http://localhost:3008/api","timestamp":"2026-01-08 18:17:05"}
+{"level":"info","message":"🔗 Health: http://localhost:3008/health","timestamp":"2026-01-08 18:17:05"}
+{"adminId":"695f9c5895a7c5ebe17a3a6d","ip":"::1","level":"info","message":"AUDIT: Admin Login","role":"super_admin","timestamp":"2026-01-08T12:47:09.970Z","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cursor/2.3.29 Chrome/138.0.7204.251 Electron/37.7.0 Safari/537.36","username":"admin"}
+{"level":"info","message":"Socket connected: NjGqIE_j8UV6kd5ZAAAB (admin)","timestamp":"2026-01-08 18:17:10"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-08 18:17:10"}
+{"adminId":"695f9c5895a7c5ebe17a3a6d","ip":"::1","level":"info","message":"AUDIT: Admin Login","role":"super_admin","timestamp":"2026-01-08T12:47:44.821Z","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","username":"admin"}
+{"level":"info","message":"Socket connected: TQQpeQZUBz85PbceAAAD (admin)","timestamp":"2026-01-08 18:17:44"}
+{"level":"info","message":"Admin 695f9c5895a7c5ebe17a3a6d joined admin room","timestamp":"2026-01-08 18:17:44"}

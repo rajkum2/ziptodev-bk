@@ -19,6 +19,11 @@ if (missingEnvVars.length > 0) {
 }
 
 const PORT = process.env.PORT || 5000;
+const SUPPORT_CHAT_ONLY = (process.env.SUPPORT_CHAT_ONLY || 'false').toLowerCase() === 'true';
+
+if (SUPPORT_CHAT_ONLY) {
+  logger.info('SUPPORT_CHAT_ONLY enabled: AI/RAG bypassed for /api/chat/message');
+}
 
 // Create HTTP server
 const server = http.createServer(app);

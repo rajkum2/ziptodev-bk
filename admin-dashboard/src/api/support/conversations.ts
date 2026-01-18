@@ -63,10 +63,17 @@ export const closeConversation = (conversationId: string) => {
   return apiClient.post<ApiResponse<ConversationListItem>>(`/admin/support/conversations/${conversationId}/close`);
 };
 
-export const sendHumanMessage = (conversationId: string, content: string, isInternalNote?: boolean) => {
-  return apiClient.post<ApiResponse<{ message: ConversationMessage }>>(`/admin/support/conversations/${conversationId}/messages`, {
-    content,
-    isInternalNote
-  });
+export const sendHumanMessage = (
+  conversationId: string,
+  content: string,
+  type: 'reply' | 'note' = 'reply'
+) => {
+  return apiClient.post<ApiResponse<{ message: ConversationMessage }>>(
+    `/admin/support/conversations/${conversationId}/messages`,
+    {
+      content,
+      type
+    }
+  );
 };
 

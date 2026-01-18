@@ -61,6 +61,20 @@ router.post(
 router.get('/health', chatController.healthCheck);
 
 /**
+ * @route   GET /api/chat/conversation/:conversationId/messages
+ * @desc    Get conversation messages for customer chat
+ * @access  Public (POC)
+ */
+router.get('/conversation/:conversationId/messages', chatController.getConversationMessages);
+
+/**
+ * @route   GET /api/chat/conversation/:conversationId
+ * @desc    Get conversation summary for customer chat
+ * @access  Public (POC)
+ */
+router.get('/conversation/:conversationId', chatController.getConversationSummary);
+
+/**
  * @route   GET /api/chat/session/:sessionId
  * @desc    Get session statistics
  * @access  Public (could be protected later)

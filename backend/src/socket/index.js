@@ -19,9 +19,18 @@ const initializeSocket = (server) => {
   // Authentication middleware
   io.use((socket, next) => {
     const token = socket.handshake.auth.token || socket.handshake.headers.authorization?.replace('Bearer ', '');
+    const sessionId = socket.handshake.auth?.sessionId;
     
     if (!token) {
-      return next(new Error('Authentication token required'));
+      if (!sessionId) {
+        return next(new Error('Authentication token required'));
+      }
+
+      socket.user = {
+        type: 'guest',
+        sessionId
+      };
+      return next();
     }
 
     try {
@@ -56,7 +65,7 @@ const initializeSocket = (server) => {
     if (socket.user.type === 'admin') {
       socket.join('admins');
       logger.info(`Admin ${socket.user.adminId} joined admin room`);
-    } else {
+    } else if (socket.user.type === 'user') {
       // User joins their own room
       socket.join(`user:${socket.user.userId}`);
       logger.info(`User ${socket.user.userId} joined their room`);
@@ -94,6 +103,24 @@ const initializeSocket = (server) => {
       if (conversationId) {
         socket.leave(`conversation:${conversationId}`);
         logger.debug(`Unsubscribed from conversation: ${conversationId}`);
+      }
+    });
+
+    // Support chat join (customer/admin)
+    socket.on('support:join_conversation', (payload = {}) => {
+      const { conversationId } = payload || {};
+      if (conversationId) {
+        socket.join(`conversation:${conversationId}`);
+        logger.debug(`Socket joined support conversation: ${conversationId}`);
+      }
+    });
+
+    // Support chat leave (customer/admin)
+    socket.on('support:leave_conversation', (payload = {}) => {
+      const { conversationId } = payload || {};
+      if (conversationId) {
+        socket.leave(`conversation:${conversationId}`);
+        logger.debug(`Socket left support conversation: ${conversationId}`);
       }
     });
   });
@@ -224,7 +251,7 @@ const emitConversationNewMessage = (payload) => {
     const io = getIO();
     const conversationId = payload?.conversationId;
     io.to('admins').emit('conversation:new_message', payload);
-    if (conversationId) {
+    if (conversationId && payload?.message?.role !== 'internal_note') {
       io.to(`conversation:${conversationId}`).emit('conversation:new_message', payload);
     }
   } catch (error) {
@@ -283,12 +310,13 @@ const emitConversationClosed = (payload) => {
 /**
  * Emit conversation updated
  */
-const emitConversationUpdated = (payload) => {
+const emitConversationUpdated = (payload, options = {}) => {
   try {
     const io = getIO();
     const conversationId = payload?.conversationId;
+    const { toRoom = true } = options;
     io.to('admins').emit('conversation:updated', payload);
-    if (conversationId) {
+    if (toRoom && conversationId) {
       io.to(`conversation:${conversationId}`).emit('conversation:updated', payload);
     }
   } catch (error) {

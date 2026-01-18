@@ -10,11 +10,13 @@ import { sendHumanMessage } from '../../api/support/conversations';
 import { ConversationMessage } from '../../api/support/types';
 import { formatDistanceToNow } from 'date-fns';
 import { useAuth } from '../../contexts/AuthContext';
+import { useSocket } from '../../contexts/SocketContext';
 
 const ConversationDetailPage = () => {
   const { conversationId } = useParams();
   const queryClient = useQueryClient();
   const { hasPermission } = useAuth();
+  const { socket } = useSocket();
   const [page, setPage] = useState(1);
   const [messages, setMessages] = useState<ConversationMessage[]>([]);
   const [composerText, setComposerText] = useState('');
@@ -29,9 +31,18 @@ const ConversationDetailPage = () => {
   const toggleTakeover = useToggleTakeover();
 
   const sendMutation = useMutation({
-    mutationFn: ({ content, isInternalNote }: { content: string; isInternalNote?: boolean }) =>
-      sendHumanMessage(conversationId || '', content, isInternalNote),
-    onSuccess: () => {
+    mutationFn: ({ content, type }: { content: string; type: 'reply' | 'note' }) =>
+      sendHumanMessage(conversationId || '', content, type),
+    onSuccess: (response) => {
+      const sentMessage = response?.data?.message;
+      if (sentMessage) {
+        setMessages(prev => {
+          if (prev.some(message => message.messageId === sentMessage.messageId)) {
+            return prev;
+          }
+          return [...prev, sentMessage];
+        });
+      }
       queryClient.invalidateQueries({ queryKey: ['support-conversation', conversationId] });
       setComposerText('');
       setInternalNote('');
@@ -69,6 +80,38 @@ const ConversationDetailPage = () => {
       setMessages(prev => [...ordered, ...prev]);
     }
   }, [detail, page]);
+
+  useEffect(() => {
+    if (!socket || !conversationId) return;
+    socket.emit('support:join_conversation', { conversationId });
+    return () => {
+      socket.emit('support:leave_conversation', { conversationId });
+    };
+  }, [socket, conversationId]);
+
+  useEffect(() => {
+    if (!socket || !conversationId) return;
+
+    const handleNewMessage = (payload: any) => {
+      const message = payload?.message ?? payload;
+      const eventConversationId = payload?.conversationId ?? message?.conversationId;
+
+      if (!message || eventConversationId !== conversationId) return;
+
+      setMessages(prev => {
+        if (prev.some(existing => existing.messageId === message.messageId)) {
+          return prev;
+        }
+        return [...prev, message];
+      });
+    };
+
+    socket.on('conversation:new_message', handleNewMessage);
+
+    return () => {
+      socket.off('conversation:new_message', handleNewMessage);
+    };
+  }, [socket, conversationId]);
 
   useEffect(() => {
     const container = scrollRef.current;
@@ -234,7 +277,7 @@ const ConversationDetailPage = () => {
             )}
             {mode !== 'AI_ONLY' && canManage && (
               <button
-                onClick={() => sendMutation.mutate({ content: composerText })}
+                onClick={() => sendMutation.mutate({ content: composerText, type: 'reply' })}
                 disabled={!composerText.trim() || sendMutation.isPending}
                 className="px-3 py-2 rounded-lg bg-primary text-white text-sm disabled:opacity-50"
               >
@@ -277,7 +320,7 @@ const ConversationDetailPage = () => {
               className="w-full border border-gray-300 rounded-lg px-3 py-2 mt-2 min-h-[70px]"
             />
             <button
-              onClick={() => sendMutation.mutate({ content: internalNote, isInternalNote: true })}
+              onClick={() => sendMutation.mutate({ content: internalNote, type: 'note' })}
               disabled={!internalNote.trim() || sendMutation.isPending}
               className="mt-2 px-3 py-2 rounded-lg bg-gray-100 text-gray-700 text-sm disabled:opacity-50"
             >

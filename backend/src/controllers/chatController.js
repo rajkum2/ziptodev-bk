@@ -8,6 +8,7 @@ const ApiResponse = require('../utils/response');
 const logger = require('../utils/logger');
 const { v4: uuidv4 } = require('uuid');
 const { emitConversationNewMessage } = require('../socket');
+const SUPPORT_CHAT_ONLY = (process.env.SUPPORT_CHAT_ONLY || 'false').toLowerCase() === 'true';
 
 /**
  * Chat Controller
@@ -31,6 +32,21 @@ const shouldUseRag = async () => {
   }
 };
 
+const canAccessConversation = (conversation, { sessionId, userId }) => {
+  if (!conversation) return false;
+  if (sessionId && conversation.guestSessionId && conversation.guestSessionId === sessionId) {
+    return true;
+  }
+  if (userId && conversation.customerUserId && conversation.customerUserId.toString() === userId) {
+    return true;
+  }
+  // TODO: Enforce strict auth for customer conversation reads.
+  if (!sessionId && !userId) {
+    return true;
+  }
+  return false;
+};
+
 /**
  * POST /api/chat/message
  * Process a chat message
@@ -40,6 +56,107 @@ exports.sendMessage = async (req, res, next) => {
     const { sessionId, userId, message, context, mode, documentId, conversationId } = req.body;
 
     let conversation = null;
+
+    const supportOnly = SUPPORT_CHAT_ONLY;
+
+    // TESTING
+    // 1) Set SUPPORT_CHAT_ONLY=true
+    // 2) POST /api/chat/message with sessionId+message (expect mode=HUMAN_ONLY)
+    // 3) Admin replies and customer receives socket event in conversation room
+    if (supportOnly) {
+      if (conversationId) {
+        conversation = await Conversation.findOne({ conversationId });
+      }
+
+      if (!conversation) {
+        conversation = await Conversation.create({
+          conversationId: conversationId || undefined,
+          customerUserId: userId || null,
+          guestSessionId: userId ? null : sessionId,
+          channel: 'web',
+          status: 'open',
+          mode: 'HUMAN_ONLY',
+          queue: 'general',
+          priority: 'medium',
+          needsReview: false,
+          lastMessageAt: new Date()
+        });
+      } else {
+        if (userId && !conversation.customerUserId) {
+          conversation.customerUserId = userId;
+        }
+        if (sessionId && !conversation.guestSessionId) {
+          conversation.guestSessionId = sessionId;
+        }
+        if (!conversation.status) {
+          conversation.status = 'open';
+        }
+        if (!conversation.queue) {
+          conversation.queue = 'general';
+        }
+        if (!conversation.priority) {
+          conversation.priority = 'medium';
+        }
+        if (conversation.mode !== 'HUMAN_ONLY') {
+          conversation.mode = 'HUMAN_ONLY';
+        }
+        conversation.lastMessageAt = new Date();
+        await conversation.save();
+      }
+
+      const traceId = uuidv4();
+      const customerMessage = await ConversationMessage.create({
+        conversationId: conversation.conversationId,
+        role: 'customer',
+        content: message,
+        metadata: { traceId }
+      });
+
+      conversation.lastMessageAt = new Date();
+      await conversation.save();
+
+      emitConversationNewMessage({
+        conversationId: conversation.conversationId,
+        conversation: {
+          conversationId: conversation.conversationId,
+          status: conversation.status,
+          mode: conversation.mode,
+          queue: conversation.queue,
+          priority: conversation.priority,
+          needsReview: conversation.needsReview,
+          aiConfidence: conversation.aiConfidence || null,
+          assignedToAdminId: conversation.assignedToAdminId || null,
+          lastMessageAt: conversation.lastMessageAt,
+          slaBreached: conversation.slaBreached,
+          slaFirstResponseDueAt: conversation.slaFirstResponseDueAt || null,
+          updatedAt: conversation.updatedAt
+        },
+        message: customerMessage
+      });
+
+      const replyText = 'Thanks! A support agent will respond shortly.';
+
+      return res.status(200).json({
+        success: true,
+        data: {
+          replyText,
+          cards: [],
+          traceId,
+          metadata: {
+            mode: 'HUMAN_ONLY',
+            supportOnly: true
+          },
+          conversationId: conversation.conversationId,
+          messageId: customerMessage.messageId
+        },
+        message: 'Success',
+        replyText,
+        cards: [],
+        traceId,
+        conversationId: conversation.conversationId,
+        messageId: customerMessage.messageId
+      });
+    }
 
     if (conversationId) {
       conversation = await Conversation.findOne({ conversationId });
@@ -288,6 +405,19 @@ exports.sendMessage = async (req, res, next) => {
  */
 exports.healthCheck = async (req, res) => {
   try {
+    if (SUPPORT_CHAT_ONLY) {
+      return res.status(200).json({
+        success: true,
+        data: {
+          healthy: true,
+          provider: 'support_only',
+          model: null,
+          configured: true
+        },
+        message: 'Chat service is healthy'
+      });
+    }
+
     const status = await chatService.getProviderStatus();
 
     return res.status(status.healthy ? 200 : 503).json({
@@ -336,6 +466,105 @@ exports.getSessionStats = async (req, res) => {
   } catch (error) {
     logger.error('Get session stats error:', error);
     return ApiResponse.serverError(res, 'Failed to get session stats');
+  }
+};
+
+/**
+ * GET /api/chat/conversation/:conversationId/messages
+ * Fetch conversation messages for customer chat
+ */
+exports.getConversationMessages = async (req, res, next) => {
+  try {
+    const { conversationId } = req.params;
+    const { limit = 50, before, sessionId, userId } = req.query;
+    const limitNum = Math.min(parseInt(limit, 10) || 50, 100);
+
+    const conversation = await Conversation.findOne({ conversationId }).lean();
+    if (!conversation) {
+      return ApiResponse.error(res, 'Conversation not found', 'CHAT_NOT_FOUND', 404);
+    }
+
+    if (!canAccessConversation(conversation, { sessionId, userId })) {
+      return ApiResponse.error(res, 'Unauthorized', 'CHAT_FORBIDDEN', 403);
+    }
+
+    let beforeDate = null;
+    if (before) {
+      const parsedDate = Date.parse(before);
+      if (!Number.isNaN(parsedDate)) {
+        beforeDate = new Date(parsedDate);
+      } else {
+        const beforeMessage = await ConversationMessage.findOne({
+          conversationId,
+          messageId: before
+        })
+          .select('createdAt')
+          .lean();
+        if (beforeMessage?.createdAt) {
+          beforeDate = beforeMessage.createdAt;
+        }
+      }
+    }
+
+    const query = { conversationId };
+    if (beforeDate) {
+      query.createdAt = { $lt: beforeDate };
+    }
+
+    const messages = await ConversationMessage.find(query)
+      .sort({ createdAt: -1 })
+      .limit(limitNum)
+      .select('messageId role content createdAt metadata')
+      .lean();
+
+    const ordered = messages.reverse().map(messageItem => ({
+      messageId: messageItem.messageId,
+      role: messageItem.role,
+      content: messageItem.content,
+      createdAt: messageItem.createdAt,
+      metadata: messageItem.metadata?.traceId ? { traceId: messageItem.metadata.traceId } : undefined
+    }));
+
+    // curl -s "http://localhost:3000/api/chat/conversation/<id>/messages?limit=50&sessionId=<sessionId>"
+    return ApiResponse.success(res, {
+      conversationId,
+      messages: ordered
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+/**
+ * GET /api/chat/conversation/:conversationId
+ * Fetch conversation summary for customer chat
+ */
+exports.getConversationSummary = async (req, res, next) => {
+  try {
+    const { conversationId } = req.params;
+    const { sessionId, userId } = req.query;
+
+    const conversation = await Conversation.findOne({ conversationId })
+      .select('conversationId status mode lastMessageAt guestSessionId customerUserId')
+      .lean();
+
+    if (!conversation) {
+      return ApiResponse.error(res, 'Conversation not found', 'CHAT_NOT_FOUND', 404);
+    }
+
+    if (!canAccessConversation(conversation, { sessionId, userId })) {
+      return ApiResponse.error(res, 'Unauthorized', 'CHAT_FORBIDDEN', 403);
+    }
+
+    // curl -s "http://localhost:3000/api/chat/conversation/<id>?sessionId=<sessionId>"
+    return ApiResponse.success(res, {
+      conversationId: conversation.conversationId,
+      status: conversation.status,
+      mode: conversation.mode,
+      lastMessageAt: conversation.lastMessageAt
+    });
+  } catch (error) {
+    next(error);
   }
 };
 

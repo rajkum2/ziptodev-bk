@@ -98,6 +98,9 @@ LOG_LEVEL=info
 ```env
 # Choose AI provider: deepseek_api | local_llm
 AI_PROVIDER=local_llm
+
+# Support-only mode (bypass AI/RAG for /api/chat/message)
+SUPPORT_CHAT_ONLY=false
 ```
 
 ### Session Management
@@ -310,6 +313,7 @@ LOG_LEVEL=info
 # CUSTOMER CHAT AI
 # ===================================
 AI_PROVIDER=local_llm
+SUPPORT_CHAT_ONLY=false
 SESSION_HISTORY_LIMIT=12
 PERSIST_CHAT_SESSIONS=true
 CHAT_RATE_LIMIT_WINDOW_MS=300000

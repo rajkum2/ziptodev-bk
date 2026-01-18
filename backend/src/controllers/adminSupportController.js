@@ -442,15 +442,16 @@ exports.closeConversation = async (req, res, next) => {
 exports.sendHumanMessage = async (req, res, next) => {
   try {
     const { conversationId } = req.params;
-    const { content, isInternalNote } = req.body;
+    const { content, isInternalNote, type } = req.body;
 
     const conversation = await Conversation.findOne({ conversationId });
     if (!conversation) {
       return ApiResponse.error(res, 'Conversation not found', 'SUPPORT_NOT_FOUND', 404);
     }
 
-    const role = isInternalNote ? 'system' : 'human';
-    const messageContent = isInternalNote ? `Internal note: ${content}` : content;
+    const resolvedType = type || (isInternalNote ? 'note' : 'reply');
+    const role = resolvedType === 'note' ? 'internal_note' : 'agent';
+    const messageContent = content;
 
     const message = await ConversationMessage.create({
       conversationId,
@@ -464,26 +465,44 @@ exports.sendHumanMessage = async (req, res, next) => {
     await createAudit(
       req.adminId,
       conversationId,
-      isInternalNote ? 'ADD_NOTE' : 'SEND_MESSAGE',
+      resolvedType === 'note' ? 'ADD_NOTE' : 'SEND_MESSAGE',
       null,
       { content: messageContent }
     );
 
     const summary = await buildConversationSummary(conversationId);
     if (summary) {
-      if (isInternalNote) {
+      const minimalConversation = {
+        conversationId: summary.conversationId,
+        status: summary.status,
+        mode: summary.mode,
+        lastMessageAt: summary.lastMessageAt
+      };
+      const safeMessage = {
+        messageId: message.messageId,
+        role: message.role,
+        content: message.content,
+        createdAt: message.createdAt
+      };
+
+      if (resolvedType === 'note') {
         emitConversationUpdated({
           ...summary,
-          systemMessage: message
-        });
+          conversationId: summary.conversationId,
+          conversation: minimalConversation,
+          message: safeMessage
+        }, { toRoom: false });
       } else {
         emitConversationNewMessage({
           ...summary,
-          message
+          conversationId: summary.conversationId,
+          conversation: minimalConversation,
+          message: safeMessage
         });
       }
     }
 
+    // curl -s -X POST "http://localhost:3000/api/admin/support/conversations/<id>/messages" -H "Authorization: Bearer <token>" -d '{"content":"Hello","type":"reply"}'
     return ApiResponse.success(res, { message, conversation: summary }, 'Message sent');
   } catch (error) {
     next(error);

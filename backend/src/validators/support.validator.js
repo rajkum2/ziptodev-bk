@@ -90,6 +90,10 @@ const sendMessageValidation = [
     .withMessage('content must be a string')
     .isLength({ min: 1, max: 2000 })
     .withMessage('content must be between 1 and 2000 characters'),
+  body('type')
+    .optional()
+    .isIn(['reply', 'note'])
+    .withMessage('type must be reply or note'),
   body('isInternalNote')
     .optional()
     .isBoolean()

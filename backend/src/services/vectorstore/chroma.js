@@ -5,7 +5,14 @@ class ChromaVectorStore {
   constructor() {
     this.baseURL = process.env.CHROMA_BASE_URL || 'http://localhost:8001';
     this.collectionName = process.env.CHROMA_COLLECTION || 'zipto_knowledge_chunks';
-    this.client = new ChromaClient({ path: this.baseURL });
+
+    // Parse URL to get host, port, and ssl
+    const url = new URL(this.baseURL);
+    this.client = new ChromaClient({
+      host: url.hostname,
+      port: url.port || (url.protocol === 'https:' ? 443 : 80),
+      ssl: url.protocol === 'https:'
+    });
     this.collectionPromise = null;
   }
 

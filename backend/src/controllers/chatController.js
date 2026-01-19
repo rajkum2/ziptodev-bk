@@ -247,21 +247,81 @@ exports.sendMessage = async (req, res, next) => {
       });
     }
 
-    // Process chat message
-    const result = effectiveMode === 'rag'
-      ? await ragService.processMessage(
+    // Process chat message with hybrid RAG + DB fallback
+    let result;
+    let usedFallback = false;
+
+    if (effectiveMode === 'rag') {
+      // Try RAG first
+      result = await ragService.processMessage(
         sessionId,
         message,
         context || {},
         userId || null,
         { mode: effectiveMode, documentId }
-      )
-      : await chatService.processMessage(
+      );
+
+      // Check if RAG didn't find relevant info - fall back to DB chat
+      const noInfoPhrases = [
+        "don't have that in the documents",
+        "not in the documents",
+        "don't have that information",
+        "no relevant information",
+        "cannot find",
+        "not found in",
+        "i don't have that",
+        "not available in the documents",
+        "no information about",
+        "unable to find"
+      ];
+
+      // Normalize quotes and check for fallback phrases
+      const normalizedReply = (result.replyText || '')
+        .toLowerCase()
+        .replace(/[''`´]/g, "'")  // Normalize various quote styles
+        .replace(/[""„]/g, '"');
+
+      const hasNoInfoPhrase = noInfoPhrases.some(phrase =>
+        normalizedReply.includes(phrase.toLowerCase())
+      );
+
+      logger.debug('RAG fallback check', {
+        sessionId,
+        replyPreview: normalizedReply.slice(0, 100),
+        hasNoInfoPhrase,
+        metadataReason: result.metadata?.reason
+      });
+
+      const shouldFallback = result.metadata?.reason || hasNoInfoPhrase;
+
+      if (shouldFallback) {
+        logger.info('RAG returned no relevant info, falling back to DB chat', {
+          sessionId,
+          reason: result.metadata?.reason || 'no_match_in_response'
+        });
+
+        // Fall back to regular chat service (which queries MongoDB)
+        result = await chatService.processMessage(
+          sessionId,
+          message,
+          context || {},
+          userId || null
+        );
+        usedFallback = true;
+      }
+    } else {
+      result = await chatService.processMessage(
         sessionId,
         message,
         context || {},
         userId || null
       );
+    }
+
+    // Add fallback info to metadata
+    if (usedFallback && result.metadata) {
+      result.metadata.usedFallback = true;
+    }
 
     // Check if there was an error during processing
     if (result.error) {

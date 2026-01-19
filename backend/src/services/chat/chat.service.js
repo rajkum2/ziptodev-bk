@@ -39,38 +39,43 @@ SECURITY: Never ask for card numbers, OTP, or passwords.`;
   }
 
   /**
-   * Detect query type from message
+   * Use LLM to intelligently detect user intent and extract search terms
+   * Returns structured data about what to fetch from database
    */
-  detectQueryType(message) {
-    const lowerMsg = message.toLowerCase();
-    const types = [];
+  async detectIntentWithLLM(message) {
+    const intentPrompt = `Analyze this message for a grocery delivery app and return JSON only.
 
-    // Product queries
-    if (/price|cost|how much|rate|product|item|buy|purchase|available|stock|onion|tomato|potato|milk|bread|rice|dal|oil|vegetable|fruit|grocery|snack|drink|beverage|egg|chicken|fish|meat|cheese|butter|curd|paneer|atta|sugar|salt|spice|masala/i.test(lowerMsg)) {
-      types.push('product');
+MESSAGE: "${message}"
+
+Return ONLY valid JSON (no markdown):
+{"intents":["product"],"searchTerms":"item name","isGreeting":false}
+
+Intent types: product, order, category, offer, help, greeting
+- product: asking about items, prices, availability
+- order: asking about orders, delivery, tracking
+- category: asking what categories/sections exist
+- offer: asking about discounts, deals
+- help: asking how app works, support
+- greeting: just hi/hello/thanks/bye
+
+Extract actual item names to searchTerms (e.g., "bananas" from "do you sell bananas?")`;
+
+    try {
+      const response = await llmRouter.sendMessage(
+        [{ role: 'user', content: intentPrompt }],
+        { temperature: 0, maxTokens: 100 }
+      );
+
+      const content = response.content.trim();
+      const jsonStr = content.replace(/```json\n?|\n?```/g, '').trim();
+      const intent = JSON.parse(jsonStr);
+
+      logger.info('Intent detected via LLM', { message: message.slice(0, 50), intent });
+      return intent;
+    } catch (error) {
+      logger.error('Intent detection failed, using fallback', { error: error.message });
+      return { intents: ['product'], searchTerms: message, isGreeting: false };
     }
-
-    // Order queries
-    if (/order|track|delivery|deliver|shipping|where is|status|placed|cancel|refund|return/i.test(lowerMsg)) {
-      types.push('order');
-    }
-
-    // Category queries
-    if (/category|categories|section|browse|what do you sell|what products|types of/i.test(lowerMsg)) {
-      types.push('category');
-    }
-
-    // Offers/promotions
-    if (/offer|discount|deal|sale|promo|coupon|save|cashback|banner/i.test(lowerMsg)) {
-      types.push('offer');
-    }
-
-    // General/help
-    if (/help|support|contact|how to|how do|what is|explain|tell me about zipto/i.test(lowerMsg)) {
-      types.push('help');
-    }
-
-    return types.length > 0 ? types : ['general'];
   }
 
   /**
@@ -166,16 +171,24 @@ SECURITY: Never ask for card numbers, OTP, or passwords.`;
   }
 
   /**
-   * Build context from database results
+   * Build context from database results using LLM-detected intent
    */
   async buildDatabaseContext(message, userId) {
-    const queryTypes = this.detectQueryType(message);
+    // Use LLM to intelligently detect intent and extract search terms
+    const intent = await this.detectIntentWithLLM(message);
     let context = '';
 
-    for (const type of queryTypes) {
+    // If it's just a greeting, no need to fetch data
+    if (intent.isGreeting) {
+      return context;
+    }
+
+    for (const type of intent.intents) {
       switch (type) {
         case 'product': {
-          const products = await this.searchProducts(message);
+          // Use LLM-extracted search terms for more accurate search
+          const searchQuery = intent.searchTerms || message;
+          const products = await this.searchProducts(searchQuery);
           if (products.length > 0) {
             const productInfo = products.map(p => {
               const v = p.variants?.[0];
@@ -187,7 +200,7 @@ SECURITY: Never ask for card numbers, OTP, or passwords.`;
             }).join('\n');
             context += `\n\n📦 PRODUCTS FOUND:\n${productInfo}`;
           } else {
-            context += `\n\n📦 PRODUCTS: No exact match found for this query.`;
+            context += `\n\n📦 PRODUCTS: No products found matching "${searchQuery}".`;
           }
           break;
         }
@@ -270,11 +283,10 @@ SECURITY: Never ask for card numbers, OTP, or passwords.`;
       // Get conversation history
       const history = sessionStore.getMessagesForContext(sessionId);
 
-      // Build dynamic context from database
+      // Build dynamic context from database (uses LLM intent detection)
       const dbContext = await this.buildDatabaseContext(userMessage, userId);
       logger.info('Database context built', {
-        query: userMessage,
-        queryTypes: this.detectQueryType(userMessage),
+        query: userMessage.slice(0, 50),
         hasContext: dbContext.length > 0
       });
 
